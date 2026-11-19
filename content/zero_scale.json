@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Check for an object scale component near zero.",
-  "illustration": "transforms.svg",
+  "illustration": "zero-scale.svg",
   "ru": {
     "title": "Zero Scale",
     "what": "Один из компонентов масштаба почти равен нулю.",

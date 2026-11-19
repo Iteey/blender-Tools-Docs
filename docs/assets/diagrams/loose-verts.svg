@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Loose vertices</title>
+<desc id="desc">Illustration for Loose vertices</desc>
+<rect width="100%" height="100%" fill="#0f172a"/>
+<rect x="20" y="20" width="760" height="380" rx="20" fill="#111827" stroke="#1f2937"/>
+<text x="40" y="58" fill="#e5e7eb" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Loose vertices</text>
+<text x="40" y="84" fill="#94a3b8" font-size="16" font-family="Arial, Helvetica, sans-serif">Problem illustration</text>
+<polygon points="110,187.5 185.0,150 185.0,225.0 185.0,225.0 110,262.5" fill="#0b2239" stroke="#60a5fa" stroke-width="3" fill-opacity="1"/>
+<polygon points="185.0,150 260,187.5 260,262.5 185.0,225.0" fill="#123459" stroke="#60a5fa" stroke-width="3" fill-opacity="1"/>
+<polygon points="185.0,225.0 260,262.5 185.0,300 185.0,225.0" fill="#0a2946" stroke="#60a5fa" stroke-width="3" fill-opacity="1"/>
+<circle cx="360" cy="190" r="7" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"/>
+<circle cx="430" cy="250" r="7" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"/>
+<circle cx="500" cy="210" r="7" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"/>
+<text x="330" y="145" fill="#e5e7eb" font-size="24" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-weight="700">Loose vertices</text>
+<text x="330" y="178" fill="#94a3b8" font-size="17" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-weight="400">Floating points are not part of any edge or face.</text>
+</svg>

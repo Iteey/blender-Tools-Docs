@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "advanced",
   "hint": "Calculate pixel density per face from world area, UV area and image size; select faces outside the tolerance of median density.",
-  "illustration": "texel.svg",
+  "illustration": "texel-deviation.svg",
   "ru": {
     "title": "Inconsistent Texel Density",
     "what": "Расчётная плотность пикселей различается между гранями.",

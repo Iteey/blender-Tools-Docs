@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Select faces whose active UV polygon area is approximately zero.",
-  "illustration": "uv.svg",
+  "illustration": "collapsed-uv.svg",
   "ru": {
     "title": "Collapsed UV faces",
     "what": "UV-грани имеют практически нулевую площадь.",

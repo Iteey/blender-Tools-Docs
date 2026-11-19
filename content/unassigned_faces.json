@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Select faces referencing missing or empty slots.",
-  "illustration": "materials.svg",
+  "illustration": "unassigned-faces.svg",
   "ru": {
     "title": "Faces with missing material",
     "what": "Грани ссылаются на пустой или отсутствующий слот материала.",

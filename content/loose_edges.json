@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Select edges not belonging to any face.",
-  "illustration": "topology.svg",
+  "illustration": "loose-edges.svg",
   "ru": {
     "title": "Loose edges",
     "what": "Есть рёбра, которые не входят ни в одну грань.",

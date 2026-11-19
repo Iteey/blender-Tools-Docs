@@ -6,7 +6,7 @@
   "severity": "INFO",
   "mode": "quick",
   "hint": "Select faces with UV coordinates outside one tile. Normal for tiling textures or UDIM.",
-  "illustration": "uv.svg",
+  "illustration": "outside-uv.svg",
   "ru": {
     "title": "UV outside 0-1",
     "what": "Некоторые UV находятся за пределами плитки 0–1.",

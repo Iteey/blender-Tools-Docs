@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Mesh has no polygon faces to export.",
-  "illustration": "topology.svg",
+  "illustration": "empty-mesh.svg",
   "ru": {
     "title": "Empty mesh",
     "what": "В объекте нет полигонов.",

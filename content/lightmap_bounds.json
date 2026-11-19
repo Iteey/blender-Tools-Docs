@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "advanced",
   "hint": "Select faces with UVs outside 0-1 or zero-area UVs in the lightmap channel.",
-  "illustration": "lightmap.svg",
+  "illustration": "lightmap-bounds.svg",
   "ru": {
     "title": "Lightmap UV outside 0-1",
     "what": "В lightmap UV есть грани вне 0–1 или с нулевой площадью.",

@@ -6,7 +6,7 @@
   "severity": "INFO",
   "mode": "advanced",
   "hint": "Select edges used by exactly one face; holes may be intentional.",
-  "illustration": "topology.svg",
+  "illustration": "boundary.svg",
   "ru": {
     "title": "Open boundary edges",
     "what": "Найдены открытые границы поверхности.",

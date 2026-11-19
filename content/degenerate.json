@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Select zero-area faces (area <= 1e-12).",
-  "illustration": "topology.svg",
+  "illustration": "degenerate.svg",
   "ru": {
     "title": "Degenerate geometry",
     "what": "Есть грани практически нулевой площади.",

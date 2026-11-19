@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Check potentially inward-facing closed outer shells. Open or nested shells cannot always be classified.",
-  "illustration": "normals.svg",
+  "illustration": "inverted-normals.svg",
   "ru": {
     "title": "Inverted normals (closed shells)",
     "what": "Замкнутая внешняя оболочка имеет отрицательный ориентированный объём — вероятно, все её грани направлены внутрь.",

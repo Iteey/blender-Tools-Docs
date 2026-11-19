@@ -6,7 +6,7 @@
   "severity": "INFO",
   "mode": "quick",
   "hint": "Image width or height exceeds the user-selected max texture size.",
-  "illustration": "textures.svg",
+  "illustration": "big-texture.svg",
   "ru": {
     "title": "Oversized textures",
     "what": "Размер текстуры превышает установленный лимит.",

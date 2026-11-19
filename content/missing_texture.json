@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Find file-image nodes with no valid unpacked file path; packed images are OK. UDIM patterns are not guessed.",
-  "illustration": "textures.svg",
+  "illustration": "missing-texture.svg",
   "ru": {
     "title": "Missing external textures",
     "what": "Некоторые внешние файлы изображений не найдены.",

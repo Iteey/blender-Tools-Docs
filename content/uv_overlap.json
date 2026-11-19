@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "advanced",
   "hint": "Triangulate UV polygons; use spatial buckets and positive-area triangle intersection. Adjacent faces sharing only an edge are not counted. Limited by UV-analysis budget.",
-  "illustration": "uv.svg",
+  "illustration": "uv-overlap.svg",
   "ru": {
     "title": "UV overlap",
     "what": "Обнаружено перекрытие UV-треугольников.",

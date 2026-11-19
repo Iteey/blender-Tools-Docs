@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Select vertices not connected to any edge.",
-  "illustration": "topology.svg",
+  "illustration": "loose-verts.svg",
   "ru": {
     "title": "Loose vertices",
     "what": "Есть вершины, не соединённые с рёбрами.",

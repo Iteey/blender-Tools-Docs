@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "advanced",
   "hint": "Detect positive-area overlap in lightmap UV channel, ignoring shared-only edges; limited by UV-analysis budget.",
-  "illustration": "lightmap.svg",
+  "illustration": "lightmap-overlap.svg",
   "ru": {
     "title": "Lightmap UV overlap",
     "what": "Lightmap UV-острова перекрываются.",

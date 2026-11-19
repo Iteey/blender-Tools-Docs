@@ -6,7 +6,7 @@
   "severity": "INFO",
   "mode": "quick",
   "hint": "Count non-empty material slots not referenced by faces.",
-  "illustration": "materials.svg",
+  "illustration": "unused-materials.svg",
   "ru": {
     "title": "Unused material slots",
     "what": "Материалы есть в слотах, но ни одна грань ими не пользуется.",

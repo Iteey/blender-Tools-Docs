@@ -1,7 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="Object origins for center and bottom snap">
-  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#283347" stroke-width=".8"/></pattern>
-  <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#5bd6bf" stroke-width="1.8"/></marker>
-  <marker id="red" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#fb7f80" stroke-width="1.8"/></marker></defs>
-  <rect width="900" height="320" rx="22" fill="#111827"/><rect width="900" height="320" rx="22" fill="url(#grid)" opacity=".58"/>
-  <text x="230" y="50" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Pivot at center</text><text x="675" y="50" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Pivot at base</text><rect x="140" y="93" width="180" height="175" rx="12" fill="#254d63" fill-opacity=".7" stroke="#75b7d5" stroke-width="3"/><path d="M212.0 180.5H248.0M230.0 162.5V198.5" stroke="#fb9a6c" stroke-width="5"/><circle cx="230.0" cy="180.5" r="8" fill="#fb9a6c"/><rect x="590" y="93" width="180" height="175" rx="12" fill="#254d63" fill-opacity=".7" stroke="#75b7d5" stroke-width="3"/><path d="M662.0 268H698.0M680.0 250V286" stroke="#fb9a6c" stroke-width="5"/><circle cx="680.0" cy="268" r="8" fill="#fb9a6c"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Pivot / Origin position</title>
+<desc id="desc">Illustration for Pivot / Origin position</desc>
+<rect width="100%" height="100%" fill="#0f172a"/>
+<rect x="20" y="20" width="760" height="380" rx="20" fill="#111827" stroke="#1f2937"/>
+<text x="40" y="58" fill="#e5e7eb" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Pivot / Origin position</text>
+<text x="40" y="84" fill="#94a3b8" font-size="16" font-family="Arial, Helvetica, sans-serif">Problem illustration</text>
+<polygon points="210,182.5 285.0,145 285.0,220.0 285.0,220.0 210,257.5" fill="#0b2239" stroke="#60a5fa" stroke-width="3" fill-opacity="1"/>
+<polygon points="285.0,145 360,182.5 360,257.5 285.0,220.0" fill="#123459" stroke="#60a5fa" stroke-width="3" fill-opacity="1"/>
+<polygon points="285.0,220.0 360,257.5 285.0,295 285.0,220.0" fill="#0a2946" stroke="#60a5fa" stroke-width="3" fill-opacity="1"/>
+<line x1="140" y1="300" x2="190" y2="300" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+<line x1="165" y1="275" x2="165" y2="325" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+<circle cx="165" cy="300" r="16" fill="none" stroke="#ef4444" stroke-width="4"/>
+<line x1="185" y1="285" x2="245" y2="250" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<line x1="245" y1="250" x2="240.19583779301496" y2="258.7704062328365" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<line x1="245" y1="250" x2="235.00091369543986" y2="249.86482206556488" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<text x="420" y="178" fill="#e5e7eb" font-size="24" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-weight="700">Origin is far from the mesh</text>
+<text x="420" y="212" fill="#94a3b8" font-size="16" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-weight="400">Bad pivots make placement and rotation harder in UE.</text>
+</svg>

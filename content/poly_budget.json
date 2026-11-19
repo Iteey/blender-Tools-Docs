@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Compare triangles in evaluated mesh (after modifiers) with the user-defined per-mesh budget.",
-  "illustration": "lod.svg",
+  "illustration": "poly-budget.svg",
   "ru": {
     "title": "Triangle budget",
     "what": "После модификаторов число треугольников выше указанного бюджета.",

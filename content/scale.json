@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Check that Scale is (1, 1, 1), tolerance 0.0001.",
-  "illustration": "transforms.svg",
+  "illustration": "scale.svg",
   "ru": {
     "title": "Unapplied Scale",
     "what": "Scale объекта отличается от (1, 1, 1).",

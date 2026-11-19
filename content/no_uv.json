@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Check whether an active UV layer exists.",
-  "illustration": "uv.svg",
+  "illustration": "no-uv.svg",
   "ru": {
     "title": "Missing UV map",
     "what": "У меша нет активной UV-карты.",

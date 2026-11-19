@@ -6,7 +6,7 @@
   "severity": "INFO",
   "mode": "quick",
   "hint": "Find neighboring smooth faces whose normal angle exceeds the selected angle and whose shared edge is not sharp. Artistic choice may be intentional.",
-  "illustration": "normals.svg",
+  "illustration": "steep-smooth.svg",
   "ru": {
     "title": "Strongly bent smooth faces",
     "what": "Сглаживание проходит через резкий угол между гранями.",

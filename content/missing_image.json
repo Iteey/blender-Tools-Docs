@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Find image texture nodes without an image.",
-  "illustration": "textures.svg",
+  "illustration": "missing-image.svg",
   "ru": {
     "title": "Empty image nodes",
     "what": "У некоторых Image Texture nodes не назначено изображение.",

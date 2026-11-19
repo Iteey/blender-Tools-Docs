@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Select faces sharing exactly the same vertex set.",
-  "illustration": "topology.svg",
+  "illustration": "duplicate-faces.svg",
   "ru": {
     "title": "Duplicate faces",
     "what": "Несколько граней используют одинаковый набор вершин.",

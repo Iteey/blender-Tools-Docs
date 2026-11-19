@@ -49,4 +49,5 @@ for lang in ('ru','en'):
 if errors:
     for msg in errors[:50]:print('FAIL',*[str(x) for x in msg])
     sys.exit(f'{len(errors)} site validation errors')
-print(f'PASS: {len(HTML)} pages, 36 checks per language, 12 diagrams, all local links and headings valid')
+diag=len(list((DOC/'assets'/'diagrams').glob('*.svg')))
+print(f'PASS: {len(HTML)} pages, 36 checks per language, {diag} SVG diagrams, all local links and headings valid')

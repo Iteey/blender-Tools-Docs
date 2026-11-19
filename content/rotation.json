@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Check object rotation is identity (all rotation modes supported).",
-  "illustration": "transforms.svg",
+  "illustration": "rotation.svg",
   "ru": {
     "title": "Unapplied Rotation",
     "what": "У объекта есть неприменённый Rotation.",

@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Check whether the world transform matrix has negative determinant.",
-  "illustration": "transforms.svg",
+  "illustration": "mirrored.svg",
   "ru": {
     "title": "Negative/mirrored Scale",
     "what": "Мировой трансформ имеет отрицательный определитель (зеркальное отражение).",

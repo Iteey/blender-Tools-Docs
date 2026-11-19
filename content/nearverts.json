@@ -6,7 +6,7 @@
   "severity": "INFO",
   "mode": "advanced",
   "hint": "Find potential duplicates using BMesh find_doubles and the merge distance; intentional close vertices are possible.",
-  "illustration": "topology.svg",
+  "illustration": "nearverts.svg",
   "ru": {
     "title": "Nearby vertices",
     "what": "Некоторые вершины расположены очень близко друг к другу.",

@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "advanced",
   "hint": "Select faces whose estimated texel density differs from the configured px/m target.",
-  "illustration": "texel.svg",
+  "illustration": "texel-target.svg",
   "ru": {
     "title": "Texel Density target",
     "what": "Расчётная плотность отличается от заданной цели.",

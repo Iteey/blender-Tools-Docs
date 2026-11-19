@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "Count material slots with no material datablock.",
-  "illustration": "materials.svg",
+  "illustration": "empty-slot.svg",
   "ru": {
     "title": "Empty material slots",
     "what": "В списке материалов имеются пустые слоты.",

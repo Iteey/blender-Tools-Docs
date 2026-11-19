@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "quick",
   "hint": "No material is present in any material slot.",
-  "illustration": "materials.svg",
+  "illustration": "no-material.svg",
   "ru": {
     "title": "No material assigned",
     "what": "В слотах не найден назначенный материал Blender.",

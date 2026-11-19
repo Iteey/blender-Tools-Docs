@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "advanced",
   "hint": "Look for the chosen lightmap UV channel; only when baked-lightmap checks are enabled.",
-  "illustration": "lightmap.svg",
+  "illustration": "lightmap-missing.svg",
   "ru": {
     "title": "Missing lightmap UV",
     "what": "Не найден ожидаемый lightmap UV-канал.",

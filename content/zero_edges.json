@@ -6,7 +6,7 @@
   "severity": "ERROR",
   "mode": "quick",
   "hint": "Select edges whose vertices are at most 1e-6 units apart.",
-  "illustration": "topology.svg",
+  "illustration": "zero-edges.svg",
   "ru": {
     "title": "Zero-length edges",
     "what": "У некоторых рёбер почти совпадают концевые вершины.",

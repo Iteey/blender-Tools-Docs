@@ -1,7 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="Face winding along shared mesh edge">
-  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#283347" stroke-width=".8"/></pattern>
-  <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#5bd6bf" stroke-width="1.8"/></marker>
-  <marker id="red" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#fb7f80" stroke-width="1.8"/></marker></defs>
-  <rect width="900" height="320" rx="22" fill="#111827"/><rect width="900" height="320" rx="22" fill="url(#grid)" opacity=".58"/>
-  <text x="225" y="52" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Consistent</text><polygon points="105,110 225,110 225,245" fill="#143c46" stroke="#57c7c1" stroke-width="3" stroke-linejoin="round"/><polygon points="225,110 345,110 225,245" fill="#143c46" stroke="#57c7c1" stroke-width="3" stroke-linejoin="round"/><path d="M226 130 V225" stroke="#5bd6bf" stroke-width="5" marker-end="url(#arrow)"/><path d="M239 225 V130" stroke="#5bd6bf" stroke-width="5" marker-end="url(#arrow)"/><text x="225" y="288" fill="#81ccc5" font-size="17" font-family="Arial, sans-serif" text-anchor="middle">Opposite directions</text><text x="675" y="52" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Inconsistent</text><polygon points="555,110 675,110 675,245" fill="#143c46" stroke="#57c7c1" stroke-width="3" stroke-linejoin="round"/><polygon points="675,110 795,110 675,245" fill="#3c2a3e" stroke="#fb7f80" stroke-width="3" stroke-linejoin="round"/><path d="M676 130 V225" stroke="#5bd6bf" stroke-width="5" marker-end="url(#arrow)"/><path d="M689 130 V225" stroke="#fb7f80" stroke-width="5" marker-end="url(#red)"/><text x="675" y="288" fill="#ff9292" font-size="17" font-family="Arial, sans-serif" text-anchor="middle">Same direction</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Inconsistent face winding</title>
+<desc id="desc">Illustration for Inconsistent face winding</desc>
+<rect width="100%" height="100%" fill="#0f172a"/>
+<rect x="20" y="20" width="760" height="380" rx="20" fill="#111827" stroke="#1f2937"/>
+<text x="40" y="58" fill="#e5e7eb" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Inconsistent face winding</text>
+<text x="40" y="84" fill="#94a3b8" font-size="16" font-family="Arial, Helvetica, sans-serif">Problem illustration</text>
+<polygon points="110,140 260,140 260,290 110,290" fill="#0b2239" stroke="#38bdf8" stroke-width="3"/>
+<polygon points="260,140 410,140 410,290 260,290" fill="#123459" stroke="#38bdf8" stroke-width="3"/>
+<line x1="170" y1="215" x2="170" y2="260" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+<line x1="170" y1="260" x2="164.84498628178537" y2="251.43111246631054" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+<line x1="170" y1="260" x2="175.15501371821463" y2="251.43111246631054" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+<line x1="335" y1="260" x2="335" y2="215" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<line x1="335" y1="215" x2="340.15501371821466" y2="223.56888753368946" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<line x1="335" y1="215" x2="329.84498628178534" y2="223.56888753368946" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<line x1="260" y1="140" x2="260" y2="290" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+<text x="460" y="185" fill="#e5e7eb" font-size="20" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-weight="700">Shared edge traversed in the same direction</text>
+<text x="460" y="220" fill="#94a3b8" font-size="16" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-weight="400">Neighboring faces disagree on winding.</text>
+</svg>

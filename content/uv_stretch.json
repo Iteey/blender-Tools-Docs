@@ -6,7 +6,7 @@
   "severity": "WARN",
   "mode": "advanced",
   "hint": "Compare normalized edge-length ratios in each source 3D triangle versus its UV triangle. Stretch threshold is configurable; distortions may be intentional.",
-  "illustration": "uv.svg",
+  "illustration": "uv-stretch.svg",
   "ru": {
     "title": "UV distortion",
     "what": "Соотношение длин рёбер в UV сильно отличается от 3D-геометрии.",

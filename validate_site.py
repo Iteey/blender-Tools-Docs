@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import sys
+from xml.etree import ElementTree as ET
 
 DOC=Path(__file__).resolve().parent/'docs'
 HTML=list(DOC.rglob('*.html'))
@@ -50,4 +51,20 @@ if errors:
     for msg in errors[:50]:print('FAIL',*[str(x) for x in msg])
     sys.exit(f'{len(errors)} site validation errors')
 diag=len(list((DOC/'assets'/'diagrams').glob('*.svg')))
-print(f'PASS: {len(HTML)} pages, 36 checks per language, {diag} SVG diagrams, all local links and headings valid')
+# Each check must use its own correctly localized and valid SVG.
+for lang in ('ru', 'en'):
+    diagrams = sorted((DOC/'assets'/'diagrams'/lang).glob('*.svg'))
+    assert len(diagrams)==36, (lang,len(diagrams))
+    for p in (DOC/lang/'checks').glob('*.html'):
+        expected=f'/diagrams/{lang}/{p.stem}.svg'
+        if expected not in p.read_text(encoding='utf-8'):
+            errors.append((p,'wrong image or missing localized diagram'))
+for svg in (DOC/'assets'/'diagrams').rglob('*.svg'):
+    try:
+        ET.parse(svg)
+    except ET.ParseError as exc:
+        errors.append((svg,'invalid SVG',str(exc)))
+if errors:
+    for err in errors[:50]: print('FAIL',*[str(x) for x in err])
+    sys.exit(f'{len(errors)} image validation errors')
+print(f'PASS: {len(HTML)} pages, 36 checks per language, 72 dedicated SVG comparisons, all local links, headings and SVGs valid')

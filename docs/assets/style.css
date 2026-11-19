@@ -31,3 +31,7 @@ html[data-theme="light"]{color-scheme:light;--canvas:#f6f8fa;--sidebar:#fff;--su
 .prose li code{font:700 12px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--text);background:var(--surface-hi);border:1px solid var(--border);border-radius:6px;padding:3px 7px;white-space:nowrap}
 @media(hover:none){.heading-link{opacity:1}}
 @media(max-width:600px){.share-row{align-items:stretch}.share-link{flex:1 1 auto}}
+
+/* Dedicated per-check comparisons: preserve the complete two-panel image on all screens. */
+.comparison-diagram img{width:100%;height:auto;max-height:none;object-fit:contain;aspect-ratio:1000/440;border-radius:15px}
+@media (max-width:690px){.comparison-diagram{margin:22px -12px 28px}.comparison-diagram img{border-radius:9px}}

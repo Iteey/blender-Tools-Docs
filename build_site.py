@@ -7,7 +7,7 @@ HTML output: docs/ (select /docs or use the included Pages workflow).
 """
 from pathlib import Path
 from html import escape
-import json, re
+import json, re, subprocess, sys
 import mistune
 
 ROOT=Path(__file__).resolve().parent
@@ -135,7 +135,7 @@ def article_page(lang,key):
 <p class="subline">{escape(d[lang]['what'])}</p>
 <div class="meta"><span class="pill {'pill-red' if d['severity']=='ERROR' else 'pill-amber' if d['severity']=='WARN' else 'pill-neutral'}">{escape(t[d['severity']])}</span>
 <span class="pill">{escape(t['advanced'] if d['mode']=='advanced' else t['quick'])}</span><span class="pill">{escape(t[d['kind']])}</span></div></div>
-<figure class="diagram"><img src="../../assets/diagrams/{escape(d['illustration'])}" alt="{escape(name,quote=True)}" loading="lazy"/><figcaption>{'Схема для объяснения концепции; не скриншот найденной ошибки.' if lang=='ru' else 'Concept illustration, not a screenshot of a detected issue.'}</figcaption></figure>
+<figure class="diagram comparison-diagram"><img src="../../assets/diagrams/{lang}/{escape(d['illustration'])}" alt="{escape(('Пример проблемы и исправления: '+name) if lang=='ru' else ('Problem versus correction: '+name),quote=True)}" loading="lazy"/><figcaption>{'Слева — пример ошибки, справа — вариант исправления. Иллюстрации условные, не скриншоты Blender.' if lang=='ru' else 'Left: example issue. Right: corrected case. Illustrative diagrams, not Blender screenshots.'}</figcaption></figure>
 <div class="article-grid"><article class="prose">{rendered}
 <div class="callout"><strong>✦ {'Как использовать результат' if lang=='ru' else 'How to use this result'}</strong><p>{escape(t['tip'])}</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>{escape(t['contents'])}</h3>
@@ -202,6 +202,7 @@ def BeautifulTitle(source):
  return source.splitlines()[0].removeprefix('# ').strip()
 
 def main():
+ subprocess.run([sys.executable,str(ROOT/'tools'/'generate_check_diagrams.py')],check=True)
  ensure_markdown_sources()
  for lang in ('ru','en'):
   (OUT/lang/'checks').mkdir(parents=True,exist_ok=True)

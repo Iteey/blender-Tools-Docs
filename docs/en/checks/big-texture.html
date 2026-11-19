@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/textures.html">Textures</a><span>/</span><span>Oversized textures</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / BIG_TEXTURE</div><h1>Oversized textures</h1>
+<div class="article-head"><div class="eyebrow">CHECK / BIG_TEXTURE</div><h1 id="big-texture">Oversized textures<a class="heading-link" href="#big-texture" title="Permalink" aria-label="Permalink: Oversized textures">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="big-texture">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">An image exceeds the configured maximum resolution.</p>
 <div class="meta"><span class="pill pill-neutral">Info</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/textures.svg" alt="Oversized textures" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>An image exceeds the configured maximum resolution.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Checks image dimensions against the configured maximum.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Very large textures can increase VRAM and disk use.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Compare resolution to the asset’s screen-space usage and project budget; downsize only when justified.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Open <strong>Image Editor</strong> and inspect image dimensions against the project budget.</li>
+<li>If clearly oversized, resize in an external editor or use <strong>Image → Resize</strong> when available for the active image.</li>
+<li>Save the new version and verify sharpness in UE5. There is no single safe universal hotkey for downscaling textures.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

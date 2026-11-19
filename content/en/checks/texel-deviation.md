@@ -16,6 +16,12 @@ Texture detail may appear inconsistent across the asset.
 
 Inspect UV scale. These measurements are estimates based on the chosen texture size.
 
+**Steps and shortcuts (Blender default keymap):**
+
+1. Open **UV Editing**, select relevant islands (`L` under the pointer), and adjust scale with `S`.
+2. Check visual density with a checker texture, then re-run the Texel Density check.
+3. Different density can be intentional (hero details or hidden surfaces); this is a judgment call.
+
 ## Important exceptions
 
 The estimate depends on chosen texture resolution, UVs, and scene scale.

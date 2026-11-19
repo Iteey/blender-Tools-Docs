@@ -31,7 +31,7 @@ I18N={
  'homefooter':'Открывай отдельную страницу проверки через меню или поиск. Примеры схематические, а не скриншоты реального анализа.',
  'noresults':'Ничего не найдено','view':'Все категории','tip':'Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.',
  'disclaimer':'Не путай рекомендации Nanite/LOD с измерениями производительности: решение нужно проверять в Unreal Engine.',
- 'next':'Следующая','previous':'Предыдущая','modehint':'Quick запускается также в Advanced.',
+ 'share':'Скопировать ссылку на проверку','sharefix':'Скопировать ссылку на исправление','copied':'Ссылка скопирована','copyfail':'Скопируй адрес из строки браузера','next':'Следующая','previous':'Предыдущая','modehint':'Quick запускается также в Advanced.',
  },
 'en': {
  'home':'Home','checks':'Checks','all':'All checks','search':'Search checks…','title':'UE5 Tools Documentation','subtitle':'Prepare game-ready assets for Unreal Engine 5',
@@ -46,7 +46,7 @@ I18N={
  'homefooter':'Open any check from navigation or search. Diagrams are illustrative, not captured scan results.',
  'noresults':'No matches','view':'All categories','tip':'In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.',
  'disclaimer':'Do not confuse Nanite/LOD advice with a performance benchmark: compare in Unreal Engine.',
- 'next':'Next','previous':'Previous','modehint':'Quick checks are also included in Advanced.',
+ 'share':'Copy check link','sharefix':'Copy fix link','copied':'Link copied','copyfail':'Copy the URL from your address bar','next':'Next','previous':'Previous','modehint':'Quick checks are also included in Advanced.',
  },
 }
 
@@ -131,7 +131,7 @@ def article_page(lang,key):
  # Source markdown content has its own H1; use the page heading above instead.
  rendered=re.sub(r'^\s*<h1>.*?</h1>\s*','',rendered,count=1,flags=re.S)
  content=f'''<div class="breadcrumbs"><a href="../index.html">{escape(t['home'])}</a><span>/</span><a href="../categories/{c['key']}.html">{escape(c[lang])}</a><span>/</span><span>{escape(name)}</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / {escape(key.upper())}</div><h1>{escape(name)}</h1>
+<div class="article-head"><div class="eyebrow">CHECK / {escape(key.upper())}</div><h1 id="{SLUGS[key]}">{escape(name)}<a class="heading-link" href="#{SLUGS[key]}" title="Permalink" aria-label="Permalink: {escape(name,quote=True)}">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="{SLUGS[key]}">⛓ {escape(t['share'])}</button><button class="share-link" type="button" data-copy-hash="fix">↗ {escape(t['sharefix'])}</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">{escape(d[lang]['what'])}</p>
 <div class="meta"><span class="pill {'pill-red' if d['severity']=='ERROR' else 'pill-amber' if d['severity']=='WARN' else 'pill-neutral'}">{escape(t[d['severity']])}</span>
 <span class="pill">{escape(t['advanced'] if d['mode']=='advanced' else t['quick'])}</span><span class="pill">{escape(t[d['kind']])}</span></div></div>
@@ -151,7 +151,7 @@ def article_page(lang,key):
  def add_id(m):
   nonlocal idx
   rid=ids[idx] if idx<len(ids) else 'extra';idx+=1
-  return f'<h2 id="{rid}">{m.group(1)}</h2>'
+  return f'<h2 id="{rid}">{m.group(1)}<a class="heading-link" href="#{rid}" title="Permalink" aria-label="Link to {escape(rid)}">#</a></h2>'
  content=re.sub(r'<h2>(.*?)</h2>',add_id,content)
  keys=[k for c in MANIFEST['categories'] for k in c['keys']]
  pos=keys.index(key)

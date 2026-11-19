@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/textures.html">Текстуры</a><span>/</span><span>Missing external textures</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / MISSING_TEXTURE</div><h1>Missing external textures</h1>
+<div class="article-head"><div class="eyebrow">CHECK / MISSING_TEXTURE</div><h1 id="missing-texture">Missing external textures<a class="heading-link" href="#missing-texture" title="Permalink" aria-label="Permalink: Missing external textures">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="missing-texture">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Некоторые внешние файлы изображений не найдены.</p>
 <div class="meta"><span class="pill pill-red">Ошибка</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Объект</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/textures.svg" alt="Missing external textures" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Некоторые внешние файлы изображений не найдены.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Проверяет существование внешних файлов FILE-изображений; packed ресурсы исключаются.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Материал может потерять текстуры при переносе проекта.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Исправь путь к изображениям или упакуй их через File &gt; External Data &gt; Pack Resources.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>Shader Editor</strong> выбери нужный узел <strong>Image Texture</strong> и укажи правильный файл через <strong>Open</strong>.</li>
+<li>Если изображения уже найдены, для переноса проекта используй <strong>File → External Data → Pack Resources</strong>.</li>
+<li>Для диагностики путей открой <code>F3</code> и поищи <strong>Find Missing Files</strong> (если доступно в текущей версии/контексте). Упаковка сама по себе не восстанавливает отсутствующий файл.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Тайловые UDIM-пути здесь не распознаются специальным образом, поэтому возможны ложные срабатывания.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

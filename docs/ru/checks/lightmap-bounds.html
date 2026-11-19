@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/lightmap.html">Lightmap UV</a><span>/</span><span>Lightmap UV outside 0-1</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / LIGHTMAP_BOUNDS</div><h1>Lightmap UV outside 0-1</h1>
+<div class="article-head"><div class="eyebrow">CHECK / LIGHTMAP_BOUNDS</div><h1 id="lightmap-bounds">Lightmap UV outside 0-1<a class="heading-link" href="#lightmap-bounds" title="Permalink" aria-label="Permalink: Lightmap UV outside 0-1">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="lightmap-bounds">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">В lightmap UV есть грани вне 0–1 или с нулевой площадью.</p>
 <div class="meta"><span class="pill pill-red">Ошибка</span>
 <span class="pill">Только Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/lightmap.svg" alt="Lightmap UV outside 0-1" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>В lightmap UV есть грани вне 0–1 или с нулевой площадью.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>На lightmap UV ищет выход за 0–1 и нулевую UV-площадь.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Запекание освещения может давать артефакты.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Сделай уникальную UV-развёртку в пределах 0–1 для lightmap.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>UV Editing</strong> выбери именно UV-канал для lightmap, не основной канал текстур.</li>
+<li>Выдели острова (<code>A</code>), расположи их внутри квадрата 0–1 клавишами <code>G</code> и <code>S</code>, затем <code>F3</code> → <strong>Pack Islands</strong>.</li>
+<li>Проверь, что UV-острова не выходят за границы и сохраняют отступы; для lightmap обычно не подходят UDIM и тайлинг.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Срабатывает только при включённой проверке lightmap и наличии канала.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

@@ -25,4 +25,25 @@ input?.addEventListener('input',()=>{
  }
  if(noResults)noResults.hidden=!q||hits>0;
 });
+
+// Deep-link controls. Clicking on a copy button copies an absolute Pages URL,
+// including the current language, check slug, and optional section hash.
+const feedback=document.querySelector('.copy-feedback');
+const lang=document.body.dataset.language||'en';
+const copyText=lang==='ru'?'Ссылка скопирована':'Link copied';
+const copyFail=lang==='ru'?'Скопируй адрес из строки браузера':'Copy the URL from your address bar';
+async function copyWithFallback(value){
+ if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(value);return true}catch(e){}}
+ const area=document.createElement('textarea');area.value=value;area.setAttribute('readonly','');area.style.cssText='position:fixed;left:-9999px;top:0;opacity:0';document.body.appendChild(area);area.select();
+ let result=false;try{result=document.execCommand('copy')}catch(e){}area.remove();return result;
+}
+document.querySelectorAll('[data-copy-hash]').forEach(btn=>{
+ btn.addEventListener('click',async()=>{
+  const hash=btn.dataset.copyHash||'';
+  const url=new URL(window.location.href);url.hash=hash;
+  const ok=await copyWithFallback(url.href);
+  if(feedback)feedback.textContent=ok?copyText:copyFail;
+ });
+});
+// The #fix URL, unlike a plain check link, scrolls straight to the repair steps.
 })();

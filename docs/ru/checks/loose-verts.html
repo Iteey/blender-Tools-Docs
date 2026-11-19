@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/geometry.html">Геометрия и топология</a><span>/</span><span>Loose vertices</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / LOOSE_VERTS</div><h1>Loose vertices</h1>
+<div class="article-head"><div class="eyebrow">CHECK / LOOSE_VERTS</div><h1 id="loose-verts">Loose vertices<a class="heading-link" href="#loose-verts" title="Permalink" aria-label="Permalink: Loose vertices">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="loose-verts">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Есть вершины, не соединённые с рёбрами.</p>
 <div class="meta"><span class="pill pill-amber">Предупреждение</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Вершины</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Loose vertices" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Есть вершины, не соединённые с рёбрами.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Ищет вершины, у которых нет связанных рёбер.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Такие вершины обычно не нужны для экспорта Static Mesh.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Выдели и удали ненужные изолированные вершины.</p>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>Edit Mode</strong> нажми <code>F3</code> → <strong>Delete Loose</strong> для удаления свободных элементов.</li>
+<li>Если нужно сохранить часть вершин, выбери только ненужные и используй <code>X</code> → <strong>Vertices</strong>.</li>
+<li>Перезапусти проверку: вспомогательные вершины не всегда означают ошибку.</li>
+</ol>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>В этой статье</h3>

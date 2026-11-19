@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/texel.html">Texel Density</a><span>/</span><span>Texel Density target</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / TEXEL_TARGET</div><h1>Texel Density target</h1>
+<div class="article-head"><div class="eyebrow">CHECK / TEXEL_TARGET</div><h1 id="texel-target">Texel Density target<a class="heading-link" href="#texel-target" title="Permalink" aria-label="Permalink: Texel Density target">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="texel-target">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Расчётная плотность отличается от заданной цели.</p>
 <div class="meta"><span class="pill pill-amber">Предупреждение</span>
 <span class="pill">Только Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/texel.svg" alt="Texel Density target" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Расчётная плотность отличается от заданной цели.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Сравнивает расчётную плотность с заданной целью px/m; если цель не задана, только информирует.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Ассет может отличаться от стандарта плотности в проекте.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Измени масштаб UV-островов или целевое значение, если оно не соответствует пайплайну.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>Сначала уточни целевой Texel Density для проекта и предполагаемый размер текстуры — аддон использует оценочные значения.</li>
+<li>В <strong>UV Editing</strong> выдели нужные острова и используй <code>S</code> для изменения масштаба, затем <code>F3</code> → <strong>Pack Islands</strong>.</li>
+<li>Повтори проверку. Не подгоняй ассет под условный порог, если у проекта другой стандарт.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Если целевое значение не задано, сравнение с нормативом не выполняется.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

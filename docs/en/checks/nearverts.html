@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Nearby vertices</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / NEARVERTS</div><h1>Nearby vertices</h1>
+<div class="article-head"><div class="eyebrow">CHECK / NEARVERTS</div><h1 id="nearverts">Nearby vertices<a class="heading-link" href="#nearverts" title="Permalink" aria-label="Permalink: Nearby vertices">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="nearverts">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some vertices are very close to one another.</p>
 <div class="meta"><span class="pill pill-neutral">Info</span>
 <span class="pill">Advanced only</span><span class="pill">Vertices</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Nearby vertices" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some vertices are very close to one another.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Uses BMesh find_doubles with a configurable radius and vertex-count safety limit.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>They may be unmerged duplicates, or intentional seams and gaps.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Inspect the selected vertices. Merge by Distance only if merging will not harm the model.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Inspect the flagged vertices closely to determine whether they are meant to be connected.</li>
+<li>For accidental duplicates, use <code>M</code> → <strong>By Distance</strong> in <strong>Edit Mode</strong>; adjust the threshold in the last-operation panel (<code>F9</code>).</li>
+<li>Do not merge nearby but intentionally separate components.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Close vertices at seams may be intentional; the scan has a size limit.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

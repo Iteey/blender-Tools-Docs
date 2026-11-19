@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/lightmap.html">Lightmap UV</a><span>/</span><span>Lightmap UV outside 0-1</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / LIGHTMAP_BOUNDS</div><h1>Lightmap UV outside 0-1</h1>
+<div class="article-head"><div class="eyebrow">CHECK / LIGHTMAP_BOUNDS</div><h1 id="lightmap-bounds">Lightmap UV outside 0-1<a class="heading-link" href="#lightmap-bounds" title="Permalink" aria-label="Permalink: Lightmap UV outside 0-1">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="lightmap-bounds">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">The lightmap UV channel contains out-of-bounds or zero-area faces.</p>
 <div class="meta"><span class="pill pill-red">Error</span>
 <span class="pill">Advanced only</span><span class="pill">Faces</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/lightmap.svg" alt="Lightmap UV outside 0-1" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>The lightmap UV channel contains out-of-bounds or zero-area faces.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Checks lightmap UVs for out-of-range coordinates and collapsed areas.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Baked lighting can exhibit visible artifacts.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Make a valid 0–1 lightmap unwrap with non-collapsed islands.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>UV Editing</strong>, select the actual lightmap UV channel, not the main texture UV channel.</li>
+<li>Select islands (<code>A</code>), fit them into 0–1 with <code>G</code> and <code>S</code>, then use <code>F3</code> → <strong>Pack Islands</strong>.</li>
+<li>Check that islands stay within bounds and retain padding; UDIMs and tiling are generally not suitable for lightmap UVs.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Only applies when lightmap checking is on and the UV channel exists.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

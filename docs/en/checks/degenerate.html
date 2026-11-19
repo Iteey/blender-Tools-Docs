@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Degenerate geometry</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / DEGENERATE</div><h1>Degenerate geometry</h1>
+<div class="article-head"><div class="eyebrow">CHECK / DEGENERATE</div><h1 id="degenerate">Degenerate geometry<a class="heading-link" href="#degenerate" title="Permalink" aria-label="Permalink: Degenerate geometry">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="degenerate">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some faces have almost zero surface area.</p>
 <div class="meta"><span class="pill pill-red">Error</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Faces</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Degenerate geometry" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some faces have almost zero surface area.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Finds faces with area at or below 1e-12 in Blender units.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>These can produce artifacts during triangulation or import.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Select the affected faces, remove degenerate geometry, and inspect the repaired mesh.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>Edit Mode</strong>, locate the reported geometry. Use <code>1</code>/<code>2</code>/<code>3</code> (number row) for vertex/edge/face selection modes.</li>
+<li>For coincident vertices, select the area and use <code>M</code> → <strong>By Distance</strong> with a small threshold.</li>
+<li>For remaining zero-area geometry, use <code>F3</code> → <strong>Degenerate Dissolve</strong>. Inspect the result before accepting changes.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

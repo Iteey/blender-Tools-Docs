@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/materials.html">Materials</a><span>/</span><span>No material assigned</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / NO_MATERIAL</div><h1>No material assigned</h1>
+<div class="article-head"><div class="eyebrow">CHECK / NO_MATERIAL</div><h1 id="no-material">No material assigned<a class="heading-link" href="#no-material" title="Permalink" aria-label="Permalink: No material assigned">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="no-material">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">No Blender material is assigned in any slot.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/materials.svg" alt="No material assigned" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>No Blender material is assigned in any slot.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Checks if any object material slot contains a material.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>You may need to assign materials manually after UE5 import.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Assign a material if the export pipeline expects it.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Select the object in <strong>Object Mode</strong>, open <strong>Material Properties</strong> (red sphere icon), and click <strong>New</strong>.</li>
+<li>Configure the material or select an existing one from the material dropdown.</li>
+<li><code>F3</code> opens Blender's operator search, but assigning a material is generally clearer through Properties.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

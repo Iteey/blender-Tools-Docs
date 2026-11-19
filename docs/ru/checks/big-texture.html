@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/textures.html">Текстуры</a><span>/</span><span>Oversized textures</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / BIG_TEXTURE</div><h1>Oversized textures</h1>
+<div class="article-head"><div class="eyebrow">CHECK / BIG_TEXTURE</div><h1 id="big-texture">Oversized textures<a class="heading-link" href="#big-texture" title="Permalink" aria-label="Permalink: Oversized textures">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="big-texture">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Размер текстуры превышает установленный лимит.</p>
 <div class="meta"><span class="pill pill-neutral">Информация</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Объект</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/textures.svg" alt="Oversized textures" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Размер текстуры превышает установленный лимит.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Сравнивает размер изображения с установленным максимальным разрешением.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Это может повышать расход видеопамяти и место на диске.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Сравни реальный экранный размер ассета и требования проекта; уменьши разрешение при необходимости.</p>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>Открой <strong>Image Editor</strong> и проверь разрешение изображения; сравни его с бюджетом проекта.</li>
+<li>Если текстура действительно избыточна, уменьши разрешение во внешнем редакторе или используй <strong>Image → Resize</strong> (если команда доступна для текущего изображения).</li>
+<li>Сохрани новую версию и перепроверь чёткость в UE5. Универсальная горячая клавиша для безопасного уменьшения текстуры отсутствует.</li>
+</ol>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>В этой статье</h3>

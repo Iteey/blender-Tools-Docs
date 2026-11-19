@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/polycount.html">Полигоны</a><span>/</span><span>Triangle budget</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / POLY_BUDGET</div><h1>Triangle budget</h1>
+<div class="article-head"><div class="eyebrow">CHECK / POLY_BUDGET</div><h1 id="poly-budget">Triangle budget<a class="heading-link" href="#poly-budget" title="Permalink" aria-label="Permalink: Triangle budget">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="poly-budget">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">После модификаторов число треугольников выше указанного бюджета.</p>
 <div class="meta"><span class="pill pill-amber">Предупреждение</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Объект</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/lod.svg" alt="Triangle budget" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>После модификаторов число треугольников выше указанного бюджета.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Считает треугольники вычисленной геометрии после модификаторов. Без заданного бюджета даёт информационный результат.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Большой меш может быть дорогим в определённых сценах; Nanite и LOD оцениваются отдельно.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Проверь назначение ассета, бюджет проекта и результаты Nanite/LOD тестов в UE5.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В 3D Viewport включи <strong>Overlays → Statistics</strong>, чтобы видеть количество треугольников.</li>
+<li>Для пробного упрощения в <strong>Modifier Properties</strong> добавь модификатор <strong>Decimate</strong>, режим Collapse; подбирай <strong>Ratio</strong> на копии объекта (<code>Shift + D</code>).</li>
+<li>Для финального выбора Nanite/LOD сравни результат в UE5 — количество полигонов само по себе не определяет выигрыш.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Количество треугольников — не прямой показатель FPS или эффективности Nanite.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

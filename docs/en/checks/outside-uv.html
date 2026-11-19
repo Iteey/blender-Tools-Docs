@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/uv.html">UV mapping</a><span>/</span><span>UV outside 0-1</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / OUTSIDE_UV</div><h1>UV outside 0-1</h1>
+<div class="article-head"><div class="eyebrow">CHECK / OUTSIDE_UV</div><h1 id="outside-uv">UV outside 0-1<a class="heading-link" href="#outside-uv" title="Permalink" aria-label="Permalink: UV outside 0-1">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="outside-uv">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some UV coordinates lie outside the 0–1 tile.</p>
 <div class="meta"><span class="pill pill-neutral">Info</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Faces</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/uv.svg" alt="UV outside 0-1" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some UV coordinates lie outside the 0–1 tile.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Finds active UV coordinates outside 0–1.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>This is valid for tiling and UDIMs, but may be unsuitable for a unique 0–1 atlas.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Check your intended UV workflow. Move islands to 0–1 only when a single atlas is required.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>UV Editor</strong>, select the relevant islands (<code>L</code> under an island, or <code>A</code> for all UVs).</li>
+<li>Move them with <code>G</code> and scale with <code>S</code> to fit into 0–1 if your atlas requires it.</li>
+<li>With <strong>UDIMs</strong>, tiling textures, or intentional offset UVs, outside-0–1 coordinates may be correct.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Tiled materials and UDIMs need not remain inside 0–1.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

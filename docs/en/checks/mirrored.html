@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/transform.html">Transforms</a><span>/</span><span>Negative/mirrored Scale</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / MIRRORED</div><h1>Negative/mirrored Scale</h1>
+<div class="article-head"><div class="eyebrow">CHECK / MIRRORED</div><h1 id="mirrored">Negative/mirrored Scale<a class="heading-link" href="#mirrored" title="Permalink" aria-label="Permalink: Negative/mirrored Scale">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="mirrored">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">The world transform has a negative determinant (mirrored orientation).</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/transforms.svg" alt="Negative/mirrored Scale" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>The world transform has a negative determinant (mirrored orientation).</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Checks the sign of the object world-matrix determinant.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Mirroring can alter triangle orientation when exporting.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Inspect Face Orientation and the imported mesh; apply scale and recalculate normals only if required.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>Object Mode</strong>, inspect negative <code>Scale</code> components in the Transform sidebar (<code>N</code>).</li>
+<li>If the pipeline requires positive scale, use <code>Ctrl + A</code> → <strong>Scale</strong> and inspect the result.</li>
+<li>In <strong>Edit Mode</strong>, <code>Shift + N</code> (<strong>Recalculate Outside</strong>) may help on a regular closed shell; confirm <strong>Face Orientation</strong> and UE5 import.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Mirroring may be intentional; verify final normals after export.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

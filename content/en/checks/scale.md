@@ -15,3 +15,9 @@ Unexpected scale can affect export, collisions, and modifiers.
 ## How to fix
 
 If the pipeline requires unit scale, use Object Mode > Ctrl+A > Scale; verify dimensions afterward.
+
+**Steps and shortcuts (Blender default keymap):**
+
+1. In **Object Mode**, select the object and press `Ctrl + A` → **Scale**.
+2. Verify geometry, modifiers, child objects, and animations after applying scale.
+3. If the project intentionally uses non-unit scale, keep it and ensure export settings match.

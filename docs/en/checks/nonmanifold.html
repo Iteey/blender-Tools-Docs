@@ -73,20 +73,27 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Non-manifold edges</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / NONMANIFOLD</div><h1>Non-manifold edges</h1>
+<div class="article-head"><div class="eyebrow">CHECK / NONMANIFOLD</div><h1 id="nonmanifold">Non-manifold edges<a class="heading-link" href="#nonmanifold" title="Permalink" aria-label="Permalink: Non-manifold edges">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="nonmanifold">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some edges belong to more than two faces.</p>
 <div class="meta"><span class="pill pill-red">Error</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Edges</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/nonmanifold.svg" alt="Non-manifold edges" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some edges belong to more than two faces.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Finds edges connected to three or more faces. Boundary edges have a separate check.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Complex topology can interfere with normals, baking, and mesh processing.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Inspect the edges; remove duplicated or unnecessary internal surfaces. Keep intended intersections if the pipeline permits them.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>Edit Mode</strong>, press <code>F3</code> and run <strong>Select Non Manifold</strong>. Inspect the selected edges.</li>
+<li>For genuinely duplicated vertices, select the relevant area and use <code>M</code> → <strong>By Distance</strong>; check the merge threshold.</li>
+<li>For unwanted internal faces, use <code>X</code> → <strong>Only Faces</strong>. To close an intended hole, select its border and press <code>F</code> (<strong>Fill</strong>).</li>
+<li>Open edges on planes and foliage may be intentional. Do not seal them blindly.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Open boundaries are not classified here as non-manifold; they have their own check.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

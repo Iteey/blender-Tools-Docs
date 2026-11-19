@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/uv.html">UV mapping</a><span>/</span><span>Missing UV map</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / NO_UV</div><h1>Missing UV map</h1>
+<div class="article-head"><div class="eyebrow">CHECK / NO_UV</div><h1 id="no-uv">Missing UV map<a class="heading-link" href="#no-uv" title="Permalink" aria-label="Permalink: Missing UV map">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="no-uv">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">The mesh has no active UV map.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/uv.svg" alt="Missing UV map" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>The mesh has no active UV map.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Checks for an active UV layer.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Most image-textured materials need UVs in UE5, but procedural approaches may not.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Create and inspect UVs if the asset requires image textures.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>Edit Mode</strong>, select relevant faces (<code>A</code>) and use <code>U</code> → <strong>Unwrap</strong> (after placing appropriate seams).</li>
+<li>For a quick starting point, choose <code>U</code> → <strong>Smart UV Project</strong>, or find it using <code>F3</code>.</li>
+<li>Open <strong>UV Editing</strong> and review the islands, stretching, and margins.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Procedural and world-space materials may not need UVs.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

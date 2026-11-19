@@ -73,20 +73,27 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/normals.html">Нормали и сглаживание</a><span>/</span><span>Inverted normals (closed shells)</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / INVERTED_NORMALS</div><h1>Inverted normals (closed shells)</h1>
+<div class="article-head"><div class="eyebrow">CHECK / INVERTED_NORMALS</div><h1 id="inverted-normals">Inverted normals (closed shells)<a class="heading-link" href="#inverted-normals" title="Permalink" aria-label="Permalink: Inverted normals (closed shells)">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="inverted-normals">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Замкнутая внешняя оболочка имеет отрицательный ориентированный объём — вероятно, все её грани направлены внутрь.</p>
 <div class="meta"><span class="pill pill-amber">Предупреждение</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/normals.svg" alt="Inverted normals (closed shells)" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Замкнутая внешняя оболочка имеет отрицательный ориентированный объём — вероятно, все её грани направлены внутрь.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Анализирует замкнутые оболочки с помощью ориентированного объёма. Открытые и вложенные оболочки требуют осторожности.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>В UE5 может быть видна обратная сторона поверхности, а лицевая — отсекаться.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Нажми на название проверки, чтобы выделить грани. В Edit Mode включи Face Orientation и проверь. Для обычной оболочки: Shift+N. Для полостей и особой геометрии сначала оцени вручную.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>Edit Mode</strong> включи <strong>Viewport Overlays → Face Orientation</strong>. Для внешней поверхности обычно ожидается синий цвет, красный указывает обратную сторону.</li>
+<li>Выдели закрытую оболочку и нажми <code>Shift + N</code> (<strong>Recalculate Outside</strong>).</li>
+<li>Если оболочка намеренно обращена внутрь (например, интерьерная полость), сначала проверь назначение. Для точечного переворота: <code>Alt + N</code> → <strong>Flip</strong>.</li>
+<li>Повтори аудит. Метод по объёму — эвристика для замкнутых оболочек; он не понимает художественное назначение поверхности.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Для открытой сетки, внутренних полостей и вложенных оболочек алгоритм может не определить «наружу». Отрицательный Scale проверяется отдельно.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

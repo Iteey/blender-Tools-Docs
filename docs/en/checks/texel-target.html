@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/texel.html">Texel density</a><span>/</span><span>Texel Density target</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / TEXEL_TARGET</div><h1>Texel Density target</h1>
+<div class="article-head"><div class="eyebrow">CHECK / TEXEL_TARGET</div><h1 id="texel-target">Texel Density target<a class="heading-link" href="#texel-target" title="Permalink" aria-label="Permalink: Texel Density target">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="texel-target">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Estimated pixel density differs from the configured target.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Advanced only</span><span class="pill">Faces</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/texel.svg" alt="Texel Density target" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Estimated pixel density differs from the configured target.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Compares estimated density to the configured px/m target; provides information when unset.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>The asset may not meet the project’s texel-density convention.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Adjust island scale or update the target if the setting does not match the project.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Verify your project's actual texel-density target and assumed texture resolution: the add-on uses estimated values.</li>
+<li>In <strong>UV Editing</strong>, select relevant islands and scale with <code>S</code>, then run <code>F3</code> → <strong>Pack Islands</strong>.</li>
+<li>Check again. Do not blindly match a generic threshold if the project uses another standard.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>No compliance check is possible when the target is unset.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

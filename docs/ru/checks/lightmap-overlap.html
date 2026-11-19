@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/lightmap.html">Lightmap UV</a><span>/</span><span>Lightmap UV overlap</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / LIGHTMAP_OVERLAP</div><h1>Lightmap UV overlap</h1>
+<div class="article-head"><div class="eyebrow">CHECK / LIGHTMAP_OVERLAP</div><h1 id="lightmap-overlap">Lightmap UV overlap<a class="heading-link" href="#lightmap-overlap" title="Permalink" aria-label="Permalink: Lightmap UV overlap">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="lightmap-overlap">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Lightmap UV-острова перекрываются.</p>
 <div class="meta"><span class="pill pill-red">Ошибка</span>
 <span class="pill">Только Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/lightmap.svg" alt="Lightmap UV overlap" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Lightmap UV-острова перекрываются.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>На выбранном lightmap UV ищет пересечение UV-треугольников; действует лимит анализа.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>В запечённом освещении это может вызвать световые артефакты.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Раздели перекрывающиеся UV-острова с достаточными отступами.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>UV Editing</strong> выбери UV-канал для lightmap и проверь пересекающиеся острова.</li>
+<li>При необходимости переразверни через <code>U</code> → <strong>Smart UV Project</strong> или <strong>Unwrap</strong>, затем выполни <code>F3</code> → <strong>Pack Islands</strong> с достаточным <strong>Margin</strong>.</li>
+<li>Повтори проверку. В отличие от основного UV-атласа, пересечения в lightmap UV обычно приводят к артефактам запечённого освещения.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Не учитывает толщину padding по разрешению lightmap. Есть ограничение размера проверки.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

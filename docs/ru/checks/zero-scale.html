@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/transform.html">Трансформации</a><span>/</span><span>Zero Scale</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / ZERO_SCALE</div><h1>Zero Scale</h1>
+<div class="article-head"><div class="eyebrow">CHECK / ZERO_SCALE</div><h1 id="zero-scale">Zero Scale<a class="heading-link" href="#zero-scale" title="Permalink" aria-label="Permalink: Zero Scale">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="zero-scale">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Один из компонентов масштаба почти равен нулю.</p>
 <div class="meta"><span class="pill pill-red">Ошибка</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Объект</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/transforms.svg" alt="Zero Scale" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Один из компонентов масштаба почти равен нулю.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Ищет почти нулевые компоненты масштаба либо вырожденную мировую матрицу.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Геометрия может схлопнуться или некорректно импортироваться.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Восстанови корректные значения масштаба объекта.</p>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>Object Mode</strong> открой Transform (<code>N</code>) и проверь поля <strong>Scale X/Y/Z</strong>.</li>
+<li>Введи корректный ненулевой масштаб (обычно <code>1</code>, если это соответствует исходному ассету).</li>
+<li>Не используй <code>Ctrl + A</code> → <strong>Scale</strong> до восстановления видимой геометрии: нулевой масштаб может привести к потере информации при применении.</li>
+</ol>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>В этой статье</h3>

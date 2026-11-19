@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Empty mesh</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / EMPTY_MESH</div><h1>Empty mesh</h1>
+<div class="article-head"><div class="eyebrow">CHECK / EMPTY_MESH</div><h1 id="empty-mesh">Empty mesh<a class="heading-link" href="#empty-mesh" title="Permalink" aria-label="Permalink: Empty mesh">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="empty-mesh">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">The mesh contains no polygon faces.</p>
 <div class="meta"><span class="pill pill-red">Error</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Empty mesh" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>The mesh contains no polygon faces.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Checks whether the source mesh contains any polygon faces.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>An empty Static Mesh has no drawable surface in UE5.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Inspect the object in Edit Mode and restore or create the intended geometry.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Select the object and press <code>Tab</code> to enter <strong>Edit Mode</strong>. Check whether it contains vertices and faces.</li>
+<li>If geometry was deleted, recover it with <code>Ctrl + Z</code> (if the operation is still in undo history) or reimport the correct mesh.</li>
+<li>Use <code>Shift + A</code> (<strong>Add</strong>) in Edit Mode to create geometry when appropriate. Never add meaningless faces just to silence the check.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

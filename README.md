@@ -1,3 +1,15 @@
+# UE5 Tools Documentation — RU / EN
+
+**Documentation update 1.1:** All 36 checks have step-by-step Blender fixes in Russian and English. Pages now include copyable permalinks to the check and the `#fix` section.
+
+**How to publish:** extract the ZIP into your existing local `iteey/blender-Tools-Docs` repository folder, then run `Publish_Update.bat`. The script first fetches remote changes and never force-pushes. Alternatively commit and push using GitHub Desktop.
+
+**Example after publishing:** https://iteey.github.io/blender-Tools-Docs/ru/checks/duplicate-faces.html#fix
+
+**Edit guide sources:** `content/ru/checks/` or `content/en/checks/`. The `.github/workflows/pages.yml` workflow rebuilds the site.
+
+---
+
 # UE5 Tools — bilingual documentation website
 
 A complete **GitHub Pages** documentation site based on the source code of **UE5 Tools v0.4.2**.

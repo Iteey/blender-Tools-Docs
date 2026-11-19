@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/polycount.html">Polycount</a><span>/</span><span>Triangle budget</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / POLY_BUDGET</div><h1>Triangle budget</h1>
+<div class="article-head"><div class="eyebrow">CHECK / POLY_BUDGET</div><h1 id="poly-budget">Triangle budget<a class="heading-link" href="#poly-budget" title="Permalink" aria-label="Permalink: Triangle budget">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="poly-budget">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Triangle count after modifiers exceeds the configured budget.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/lod.svg" alt="Triangle budget" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Triangle count after modifiers exceeds the configured budget.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Counts evaluated triangles after modifiers. Without a configured budget, reports information rather than failure.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>High triangle counts may be expensive in some scenes; Nanite and LOD suitability must be evaluated separately.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Check the asset role, project budget, and profiling results in UE5.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Enable <strong>Overlays → Statistics</strong> in the 3D Viewport to see triangle counts.</li>
+<li>For a trial simplification, add a <strong>Decimate</strong> modifier (Collapse mode) to a duplicate (<code>Shift + D</code>) and adjust <strong>Ratio</strong>.</li>
+<li>For Nanite vs LOD, compare performance in UE5: polygon count alone cannot prove which is faster.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Triangle count alone does not predict FPS or Nanite efficiency.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

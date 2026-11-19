@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Loose vertices</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / LOOSE_VERTS</div><h1>Loose vertices</h1>
+<div class="article-head"><div class="eyebrow">CHECK / LOOSE_VERTS</div><h1 id="loose-verts">Loose vertices<a class="heading-link" href="#loose-verts" title="Permalink" aria-label="Permalink: Loose vertices">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="loose-verts">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some vertices are not connected to any edges.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Vertices</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Loose vertices" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some vertices are not connected to any edges.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Finds vertices without connected edges.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Isolated vertices normally add no useful data to a Static Mesh export.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Select and delete unneeded isolated vertices.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>Edit Mode</strong>, run <code>F3</code> → <strong>Delete Loose</strong> to remove stray geometry.</li>
+<li>To preserve some vertices, select only the unwanted ones and use <code>X</code> → <strong>Vertices</strong>.</li>
+<li>Re-run the check. Helper vertices are not automatically an error.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

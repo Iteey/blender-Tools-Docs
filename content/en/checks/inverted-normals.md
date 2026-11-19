@@ -16,6 +16,13 @@ The exterior can be culled, and the wrong side of the surface may be visible in 
 
 Select flagged faces and inspect Blender Face Orientation. Use Shift+N for an ordinary closed shell; manually review nested cavities and special cases.
 
+**Steps and shortcuts (Blender default keymap):**
+
+1. In **Edit Mode**, enable **Viewport Overlays → Face Orientation**. Blue normally indicates the front side; red indicates the back side.
+2. Select a closed shell and press `Shift + N` (**Recalculate Outside**).
+3. If the inward-facing shell is intentional (for example an interior cavity), inspect it first. To flip selected faces: `Alt + N` → **Flip**.
+4. Scan again. Signed-volume detection is a heuristic for closed shells, not a judgment about artistic intent.
+
 ## Important exceptions
 
 Open meshes, cavities, and nested shells may not have a reliably classified exterior. Negative Scale is checked separately.

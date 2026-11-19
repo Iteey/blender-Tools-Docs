@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/uv.html">UV-развёртка</a><span>/</span><span>UV outside 0-1</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / OUTSIDE_UV</div><h1>UV outside 0-1</h1>
+<div class="article-head"><div class="eyebrow">CHECK / OUTSIDE_UV</div><h1 id="outside-uv">UV outside 0-1<a class="heading-link" href="#outside-uv" title="Permalink" aria-label="Permalink: UV outside 0-1">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="outside-uv">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Некоторые UV находятся за пределами плитки 0–1.</p>
 <div class="meta"><span class="pill pill-neutral">Информация</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/uv.svg" alt="UV outside 0-1" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Некоторые UV находятся за пределами плитки 0–1.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Ищет UV-координаты вне диапазона 0–1 активной карты.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Это нормально для тайлинга и UDIM, но может быть ошибкой для уникальных атласов.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Проверь назначение UV. Переноси в 0–1 только если нужен единый атлас.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>UV Editor</strong> выдели нужные UV-острова (<code>L</code> над островом или <code>A</code> для всех UV).</li>
+<li>Перемести острова клавишей <code>G</code> и измени масштаб клавишей <code>S</code>, чтобы разместить их в 0–1, если этого требует атлас.</li>
+<li>Если ты используешь <strong>UDIM</strong>, тайлинг или специально вынесенные UV, такое расположение может быть правильным.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Тайлинговые текстуры и UDIM не обязаны находиться в 0–1.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

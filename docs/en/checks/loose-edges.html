@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Loose edges</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / LOOSE_EDGES</div><h1>Loose edges</h1>
+<div class="article-head"><div class="eyebrow">CHECK / LOOSE_EDGES</div><h1 id="loose-edges">Loose edges<a class="heading-link" href="#loose-edges" title="Permalink" aria-label="Permalink: Loose edges">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="loose-edges">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some edges do not belong to any polygon face.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Edges</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Loose edges" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some edges do not belong to any polygon face.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Finds edges that do not belong to any polygon.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>They do not form a drawable surface in a typical game mesh.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Remove unnecessary loose geometry after checking whether it is still needed for modeling.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Enter <strong>Edit Mode</strong> (<code>Tab</code>), then <code>F3</code> → <strong>Delete Loose</strong>.</li>
+<li>Check whether the mesh contains intentional helper edges: this command may remove those as well.</li>
+<li>Alternatively, select only the unwanted reported edges and use <code>X</code> → <strong>Edges</strong>.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

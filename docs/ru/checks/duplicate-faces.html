@@ -73,19 +73,26 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/geometry.html">Геометрия и топология</a><span>/</span><span>Duplicate faces</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / DUPLICATE_FACES</div><h1>Duplicate faces</h1>
+<div class="article-head"><div class="eyebrow">CHECK / DUPLICATE_FACES</div><h1 id="duplicate-faces">Duplicate faces<a class="heading-link" href="#duplicate-faces" title="Permalink" aria-label="Permalink: Duplicate faces">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="duplicate-faces">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Несколько граней используют одинаковый набор вершин.</p>
 <div class="meta"><span class="pill pill-red">Ошибка</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Duplicate faces" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Несколько граней используют одинаковый набор вершин.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Сопоставляет неориентированные наборы индексов вершин граней.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Перекрытие может вызвать мерцание, ошибки запекания и лишнюю геометрию.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Найди дубликаты и удали лишние грани, не повреждая нужную поверхность.</p>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>Нажми на строку <strong>Duplicate faces</strong> в чек-листе, чтобы выделить найденные грани. Если нужно, нажми <code>Tab</code> для <strong>Edit Mode</strong> и <code>3</code> для выбора граней.</li>
+<li>Включи <strong>X-Ray</strong> клавишами <code>Alt + Z</code> и проверь, действительно ли две грани лежат в одном месте. При необходимости временно скрой выбранное <code>H</code>, затем верни <code>Alt + H</code>.</li>
+<li>Выдели <strong>только лишнюю</strong> грань (не обе) и нажми <code>X</code> → <strong>Only Faces</strong> — это удаляет грань без ненужного удаления соседних вершин и рёбер.</li>
+<li>Снова запусти проверку. <code>M</code> → <strong>By Distance</strong> помогает при дублированных вершинах, но <strong>не гарантирует</strong> удаления двух граней с одинаковыми вершинами. Не применяй его вместо осмотра граней.</li>
+</ol>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>В этой статье</h3>

@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/geometry.html">Geometry &amp; topology</a><span>/</span><span>Zero-length edges</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / ZERO_EDGES</div><h1>Zero-length edges</h1>
+<div class="article-head"><div class="eyebrow">CHECK / ZERO_EDGES</div><h1 id="zero-edges">Zero-length edges<a class="heading-link" href="#zero-edges" title="Permalink" aria-label="Permalink: Zero-length edges">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="zero-edges">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some edges join vertices at nearly identical positions.</p>
 <div class="meta"><span class="pill pill-red">Error</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Edges</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/topology.svg" alt="Zero-length edges" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some edges join vertices at nearly identical positions.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Measures each edge’s endpoints (threshold: 1e-6 Blender units).</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Zero-length edges complicate processing and can affect normals.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Inspect the selected edges; use Merge by Distance only where the points should actually merge.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Select the reported edges from the checklist and enter <strong>Edit Mode</strong> (<code>Tab</code>).</li>
+<li>Use <code>M</code> → <strong>By Distance</strong> to merge coincident edge endpoints.</li>
+<li>If an edge is unwanted loose geometry, try <code>X</code> → <strong>Edges</strong>; verify that required faces are preserved.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

@@ -73,20 +73,26 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/uv.html">UV mapping</a><span>/</span><span>UV overlap</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / UV_OVERLAP</div><h1>UV overlap</h1>
+<div class="article-head"><div class="eyebrow">CHECK / UV_OVERLAP</div><h1 id="uv-overlap">UV overlap<a class="heading-link" href="#uv-overlap" title="Permalink" aria-label="Permalink: UV overlap">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="uv-overlap">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Some UV triangles overlap with a positive area.</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Advanced only</span><span class="pill">Faces</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/uv.svg" alt="UV overlap" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Some UV triangles overlap with a positive area.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Triangulates UV faces and tests positive-area intersections, with triangle and pair safety caps.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Overlaps are fine for mirroring and tiling but unsuitable for unique baking or lightmaps.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Inspect the UV Editor. Separate islands only in channels that require unique coverage.</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Open <strong>UV Editing</strong> and inspect the affected islands; hover an island and press <code>L</code> to select linked UVs.</li>
+<li>Move/rotate/scale islands with <code>G</code>, <code>R</code>, <code>S</code>, or use <code>F3</code> → <strong>Pack Islands</strong> after a proper unwrap.</li>
+<li>Mirrored and shared UVs may be intentional for ordinary textures, but usually <strong>not valid for lightmap UVs</strong>.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Overlap can be intentional (mirrored/stacked UV). Complexity limits yield SKIP, not PASS.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

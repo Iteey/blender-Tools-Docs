@@ -73,20 +73,27 @@
 <button id="theme-button" class="action" title="Тема" aria-label="Тема">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Главная</a><span>/</span><a href="../categories/uv.html">UV-развёртка</a><span>/</span><span>UV distortion</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / UV_STRETCH</div><h1>UV distortion</h1>
+<div class="article-head"><div class="eyebrow">CHECK / UV_STRETCH</div><h1 id="uv-stretch">UV distortion<a class="heading-link" href="#uv-stretch" title="Permalink" aria-label="Permalink: UV distortion">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="uv-stretch">⛓ Скопировать ссылку на проверку</button><button class="share-link" type="button" data-copy-hash="fix">↗ Скопировать ссылку на исправление</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Соотношение длин рёбер в UV сильно отличается от 3D-геометрии.</p>
 <div class="meta"><span class="pill pill-amber">Предупреждение</span>
 <span class="pill">Только Advanced</span><span class="pill">Грани</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/uv.svg" alt="UV distortion" loading="lazy"/><figcaption>Схема для объяснения концепции; не скриншот найденной ошибки.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">Что проверяет<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Соотношение длин рёбер в UV сильно отличается от 3D-геометрии.</p>
-<h2 id="mechanism">Как работает проверка</h2>
+<h2 id="mechanism">Как работает проверка<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Сравнивает отношения длин рёбер UV и 3D-треугольников; порог задаётся в настройках.</p>
-<h2 id="why">Почему важно для UE5</h2>
+<h2 id="why">Почему важно для UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Текстура может выглядеть растянутой; иногда это намеренный художественный приём.</p>
-<h2 id="fix">Как исправить</h2>
+<h2 id="fix">Как исправить<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Проверь Checker Texture, переразверни или расслабь проблемные острова.</p>
-<h2 id="exceptions">Важные нюансы</h2>
+<p><strong>Шаги и сочетания клавиш (стандартная раскладка Blender):</strong></p>
+<ol>
+<li>В <strong>UV Editor</strong> включи <strong>Overlays → Stretch</strong> и проверь проблемные участки; для визуальной оценки можно использовать checker-текстуру.</li>
+<li>Добавь швы на нужные рёбра: <code>F3</code> → <strong>Mark Seam</strong>; затем выдели грани и нажми <code>U</code> → <strong>Unwrap</strong>.</li>
+<li>В UV Editor попробуй <code>F3</code> → <strong>Minimize Stretch</strong>, если это подходит для твоей формы.</li>
+<li>Не стремись к нулевому растяжению любой ценой: важны видимые искажения и назначение ассета.</li>
+</ol>
+<h2 id="exceptions">Важные нюансы<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>Проверка геометрическая: она не умеет измерить реальный вид текстур в UE5.</p>
 
 <div class="callout"><strong>✦ Как использовать результат</strong><p>Инструкция в Blender: нажми на название обнаруженной проблемы, чтобы выделить соответствующие элементы; исправления выполняются вручную.</p></div>

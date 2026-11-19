@@ -73,19 +73,25 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/transform.html">Transforms</a><span>/</span><span>Unapplied Scale</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / SCALE</div><h1>Unapplied Scale</h1>
+<div class="article-head"><div class="eyebrow">CHECK / SCALE</div><h1 id="scale">Unapplied Scale<a class="heading-link" href="#scale" title="Permalink" aria-label="Permalink: Unapplied Scale">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="scale">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">The object Scale differs from (1, 1, 1).</p>
 <div class="meta"><span class="pill pill-amber">Warning</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/transforms.svg" alt="Unapplied Scale" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>The object Scale differs from (1, 1, 1).</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Compares Scale components to 1.0 (tolerance: 0.0001).</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>Unexpected scale can affect export, collisions, and modifiers.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>If the pipeline requires unit scale, use Object Mode &gt; Ctrl+A &gt; Scale; verify dimensions afterward.</p>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>In <strong>Object Mode</strong>, select the object and press <code>Ctrl + A</code> → <strong>Scale</strong>.</li>
+<li>Verify geometry, modifiers, child objects, and animations after applying scale.</li>
+<li>If the project intentionally uses non-unit scale, keep it and ensure export settings match.</li>
+</ol>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
 </article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>

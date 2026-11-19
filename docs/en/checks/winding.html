@@ -73,20 +73,27 @@
 <button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
 </div></header>
 <main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/normals.html">Normals &amp; shading</a><span>/</span><span>Inconsistent face winding</span></div>
-<div class="article-head"><div class="eyebrow">CHECK / WINDING</div><h1>Inconsistent face winding</h1>
+<div class="article-head"><div class="eyebrow">CHECK / WINDING</div><h1 id="winding">Inconsistent face winding<a class="heading-link" href="#winding" title="Permalink" aria-label="Permalink: Inconsistent face winding">#</a></h1><div class="share-row"><button class="share-link" type="button" data-copy-hash="winding">⛓ Copy check link</button><button class="share-link" type="button" data-copy-hash="fix">↗ Copy fix link</button><span class="copy-feedback" role="status" aria-live="polite"></span></div>
 <p class="subline">Adjacent faces traverse the same shared edge in the same direction.</p>
 <div class="meta"><span class="pill pill-red">Error</span>
 <span class="pill">Quick + Advanced</span><span class="pill">Faces</span></div></div>
 <figure class="diagram"><img src="../../assets/diagrams/winding.svg" alt="Inconsistent face winding" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
-<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks<a class="heading-link" href="#what" title="Permalink" aria-label="Link to what">#</a></h2>
 <p>Adjacent faces traverse the same shared edge in the same direction.</p>
-<h2 id="mechanism">How detection works</h2>
+<h2 id="mechanism">How detection works<a class="heading-link" href="#mechanism" title="Permalink" aria-label="Link to mechanism">#</a></h2>
 <p>Compares traversal direction along two-face shared edges.</p>
-<h2 id="why">Why it matters for UE5</h2>
+<h2 id="why">Why it matters for UE5<a class="heading-link" href="#why" title="Permalink" aria-label="Link to why">#</a></h2>
 <p>This can cause inconsistent face normals and backface culling.</p>
-<h2 id="fix">How to fix</h2>
+<h2 id="fix">How to fix<a class="heading-link" href="#fix" title="Permalink" aria-label="Link to fix">#</a></h2>
 <p>Select the flagged faces and inspect Face Orientation. For a regular continuous shell, try Shift+N (Recalculate Outside).</p>
-<h2 id="exceptions">Important exceptions</h2>
+<p><strong>Steps and shortcuts (Blender default keymap):</strong></p>
+<ol>
+<li>Enter <strong>Edit Mode</strong> (<code>Tab</code>) and enable <strong>Face Orientation</strong> in <strong>Viewport Overlays</strong>.</li>
+<li>For a normal closed shell, select relevant faces and press <code>Shift + N</code> (<strong>Recalculate Outside</strong>).</li>
+<li>To invert a specific face, select it and use <code>Alt + N</code> → <strong>Flip</strong>.</li>
+<li>Scan again. <code>Shift + N</code> may not resolve ambiguous open or non-manifold regions.</li>
+</ol>
+<h2 id="exceptions">Important exceptions<a class="heading-link" href="#exceptions" title="Permalink" aria-label="Link to exceptions">#</a></h2>
 <p>A completely inverted closed shell can pass this check; see Inverted Normals.</p>
 
 <div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>

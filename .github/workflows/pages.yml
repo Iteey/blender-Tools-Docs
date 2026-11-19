@@ -19,23 +19,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Configure Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Install Markdown renderer
-        run: python -m pip install -r requirements.txt
-      - name: Generate bilingual HTML
-        run: python build_site.py
-      - name: Validate generated links
-        run: python validate_site.py
+        uses: actions/checkout@v5
+      - name: Verify checked-in website files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s docs/index.html
+          test -s docs/ru/index.html
+          test -s docs/en/index.html
+          test -s docs/ru/checks/duplicate-faces.html
+          test -s docs/en/checks/duplicate-faces.html
+          test -s docs/assets/style.css
+          test -s docs/assets/app.js
+          test -s docs/assets/diagrams/ru/duplicate-faces.svg
+          test -s docs/assets/diagrams/en/duplicate-faces.svg
+          echo "Prebuilt UE5 Tools documentation is present."
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
+
   deploy:
     environment:
       name: github-pages

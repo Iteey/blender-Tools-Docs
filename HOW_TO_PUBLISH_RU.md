@@ -47,3 +47,8 @@
 - Пример: https://iteey.github.io/blender-Tools-Docs/ru/checks/duplicate-faces.html#fix
 - Исходные статьи для редактирования: `content/ru/checks/` и `content/en/checks/`. Сайт пересобирается workflow `pages.yml`.
 - Важное замечание: горячие клавиши рассчитаны на стандартную раскладку Blender; в пользовательских Keymap они могут отличаться.
+
+
+## Новые иллюстрации v1.3
+
+36 проверок имеют отдельные схемы проблемы и исправления на русском и английском. Исходники: `tools/generate_check_diagrams.py`; SVG создаются автоматически при запуске `build_site.py`.

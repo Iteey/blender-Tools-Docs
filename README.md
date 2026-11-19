@@ -1,6 +1,6 @@
 # UE5 Tools Documentation — RU / EN
 
-**Documentation update 1.1:** All 36 checks have step-by-step Blender fixes in Russian and English. Pages now include copyable permalinks to the check and the `#fix` section.
+**Documentation update 1.3:** All 36 checks have unique side-by-side issue/fix illustrations, individually labeled in Russian and English. Every SVG is generated from editable source in `tools/generate_check_diagrams.py`, with `#fix` permalinks retained.
 
 **How to publish:** extract the ZIP into your existing local `iteey/blender-Tools-Docs` repository folder, then run `Publish_Update.bat`. The script first fetches remote changes and never force-pushes. Alternatively commit and push using GitHub Desktop.
 
@@ -16,7 +16,7 @@ A complete **GitHub Pages** documentation site based on the source code of **UE5
 
 - 36 checks, each with its own article in **Russian and English**, plus Getting Started and Nanite/LOD advisor guides.
 - Explanations cover what is detected, how it is detected, why it matters for UE5, how to fix it, and exceptions when relevant.
-- 12 original editable vector diagrams (SVG).
+- 72 localized check illustrations (36 Russian + 36 English) showing problem versus correction, plus separate overview diagrams.
 - Searchable navigation, light/dark mode, mobile layout, and a language switch retaining the current article.
 - Automated GitHub Pages deployment using **GitHub Actions**.
 - No server, database, site hosting bill, or JavaScript framework.
@@ -73,7 +73,8 @@ build_site.py                 # Markdown → HTML generator
 docs/                         # ready-to-publish generated website
   ru/                        # Russian pages
   en/                        # English pages
-  assets/diagrams/           # 12 SVG illustrations
+  assets/diagrams/           # localized /ru and /en check SVGs + overview art
+tools/generate_check_diagrams.py  # generator for editable bilingual diagrams
 requirements.txt
 ```
 

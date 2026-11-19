@@ -1,0 +1,26 @@
+{
+  "key": "rotation",
+  "label": "Unapplied Rotation",
+  "category": "transform",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Check object rotation is identity (all rotation modes supported).",
+  "illustration": "transforms.svg",
+  "ru": {
+    "title": "Unapplied Rotation",
+    "what": "У объекта есть неприменённый Rotation.",
+    "why": "Ориентация при импорте может отличаться от ожидаемой настройками проекта.",
+    "fix": "Если нужно: Object Mode > Ctrl+A > Rotation. Не применяй бездумно к ригам и привязанным объектам.",
+    "mechanism": "Проверяет отклонение вращения от нулевого с учётом режима вращения объекта.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Unapplied Rotation",
+    "what": "The object has unapplied rotation.",
+    "why": "The imported orientation may differ from project expectations.",
+    "fix": "Use Ctrl+A > Rotation only when needed. Avoid blindly applying rotation to rigged or linked objects.",
+    "mechanism": "Tests rotation against identity across object rotation modes.",
+    "exceptions": ""
+  }
+}

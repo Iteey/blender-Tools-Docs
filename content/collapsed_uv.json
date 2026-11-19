@@ -1,0 +1,26 @@
+{
+  "key": "collapsed_uv",
+  "label": "Collapsed UV faces",
+  "category": "uv",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select faces whose active UV polygon area is approximately zero.",
+  "illustration": "uv.svg",
+  "ru": {
+    "title": "Collapsed UV faces",
+    "what": "UV-грани имеют практически нулевую площадь.",
+    "why": "Текстура на этих гранях может растягиваться в линию или точку.",
+    "fix": "Выдели грани и разверни их заново, если они должны получать текстуру.",
+    "mechanism": "Вычисляет площадь каждого UV-полигона в активной карте.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Collapsed UV faces",
+    "what": "Some UV polygons have nearly zero area.",
+    "why": "The texture can collapse to a line or point on those faces.",
+    "fix": "Select and unwrap the faces again if they must receive texture detail.",
+    "mechanism": "Computes polygon area in the active UV map.",
+    "exceptions": ""
+  }
+}

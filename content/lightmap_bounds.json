@@ -1,0 +1,26 @@
+{
+  "key": "lightmap_bounds",
+  "label": "Lightmap UV outside 0-1",
+  "category": "lightmap",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "advanced",
+  "hint": "Select faces with UVs outside 0-1 or zero-area UVs in the lightmap channel.",
+  "illustration": "lightmap.svg",
+  "ru": {
+    "title": "Lightmap UV outside 0-1",
+    "what": "В lightmap UV есть грани вне 0–1 или с нулевой площадью.",
+    "why": "Запекание освещения может давать артефакты.",
+    "fix": "Сделай уникальную UV-развёртку в пределах 0–1 для lightmap.",
+    "mechanism": "На lightmap UV ищет выход за 0–1 и нулевую UV-площадь.",
+    "exceptions": "Срабатывает только при включённой проверке lightmap и наличии канала."
+  },
+  "en": {
+    "title": "Lightmap UV outside 0-1",
+    "what": "The lightmap UV channel contains out-of-bounds or zero-area faces.",
+    "why": "Baked lighting can exhibit visible artifacts.",
+    "fix": "Make a valid 0–1 lightmap unwrap with non-collapsed islands.",
+    "mechanism": "Checks lightmap UVs for out-of-range coordinates and collapsed areas.",
+    "exceptions": "Only applies when lightmap checking is on and the UV channel exists."
+  }
+}

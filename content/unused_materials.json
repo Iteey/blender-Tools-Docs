@@ -1,0 +1,26 @@
+{
+  "key": "unused_materials",
+  "label": "Unused material slots",
+  "category": "materials",
+  "kind": "OBJECT",
+  "severity": "INFO",
+  "mode": "quick",
+  "hint": "Count non-empty material slots not referenced by faces.",
+  "illustration": "materials.svg",
+  "ru": {
+    "title": "Unused material slots",
+    "what": "Материалы есть в слотах, но ни одна грань ими не пользуется.",
+    "why": "Лишние слоты усложняют ассет и его поддержку.",
+    "fix": "Удаляй неиспользуемые слоты, если они не нужны для пайплайна.",
+    "mechanism": "Сравнивает список слотов с индексами материалов, используемых гранями.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Unused material slots",
+    "what": "Some material slots are present but no faces use them.",
+    "why": "Unused slots make the asset harder to maintain.",
+    "fix": "Remove unused slots only if they are not part of the established pipeline.",
+    "mechanism": "Compares material slots with the indices referenced by faces.",
+    "exceptions": ""
+  }
+}

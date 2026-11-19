@@ -1,0 +1,26 @@
+{
+  "key": "uv_stretch",
+  "label": "UV distortion",
+  "category": "uv",
+  "kind": "FACE",
+  "severity": "WARN",
+  "mode": "advanced",
+  "hint": "Compare normalized edge-length ratios in each source 3D triangle versus its UV triangle. Stretch threshold is configurable; distortions may be intentional.",
+  "illustration": "uv.svg",
+  "ru": {
+    "title": "UV distortion",
+    "what": "Соотношение длин рёбер в UV сильно отличается от 3D-геометрии.",
+    "why": "Текстура может выглядеть растянутой; иногда это намеренный художественный приём.",
+    "fix": "Проверь Checker Texture, переразверни или расслабь проблемные острова.",
+    "mechanism": "Сравнивает отношения длин рёбер UV и 3D-треугольников; порог задаётся в настройках.",
+    "exceptions": "Проверка геометрическая: она не умеет измерить реальный вид текстур в UE5."
+  },
+  "en": {
+    "title": "UV distortion",
+    "what": "Relative edge lengths differ substantially between UV and 3D geometry.",
+    "why": "The texture may look stretched; sometimes the distortion is intentional.",
+    "fix": "Test with a checker texture, then relax or re-unwrap problematic islands.",
+    "mechanism": "Compares UV/3D triangle edge-length ratios against a configurable threshold.",
+    "exceptions": "This is a geometric test; it cannot measure the final UE5 material appearance."
+  }
+}

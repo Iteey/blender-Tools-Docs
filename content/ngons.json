@@ -1,0 +1,26 @@
+{
+  "key": "ngons",
+  "label": "N-gons",
+  "category": "geometry",
+  "kind": "FACE",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Select every face with more than four vertices.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "N-gons",
+    "what": "Есть грани с пятью и более вершинами.",
+    "why": "При триангуляции в UE5 форма и шейдинг могут измениться.",
+    "fix": "Проверь найденные грани; раздели их на квады или треугольники, если это нужно. Сам по себе N-gon не всегда ошибка.",
+    "mechanism": "Считает грани, у которых больше четырёх вершин.",
+    "exceptions": "N-gon на плоскости может быть допустим; проверь триангуляцию и шейдинг перед экспортом."
+  },
+  "en": {
+    "title": "N-gons",
+    "what": "Some faces have five or more vertices.",
+    "why": "Triangulation during import can change the shape and shading.",
+    "fix": "Inspect the flagged faces. Split them into quads or triangles where necessary; an N-gon is not automatically wrong.",
+    "mechanism": "Counts faces with more than four vertices.",
+    "exceptions": "A planar N-gon may be valid; inspect triangulation and shading before export."
+  }
+}

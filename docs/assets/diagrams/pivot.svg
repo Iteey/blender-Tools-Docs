@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="Object origins for center and bottom snap">
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#283347" stroke-width=".8"/></pattern>
+  <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#5bd6bf" stroke-width="1.8"/></marker>
+  <marker id="red" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#fb7f80" stroke-width="1.8"/></marker></defs>
+  <rect width="900" height="320" rx="22" fill="#111827"/><rect width="900" height="320" rx="22" fill="url(#grid)" opacity=".58"/>
+  <text x="230" y="50" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Pivot at center</text><text x="675" y="50" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Pivot at base</text><rect x="140" y="93" width="180" height="175" rx="12" fill="#254d63" fill-opacity=".7" stroke="#75b7d5" stroke-width="3"/><path d="M212.0 180.5H248.0M230.0 162.5V198.5" stroke="#fb9a6c" stroke-width="5"/><circle cx="230.0" cy="180.5" r="8" fill="#fb9a6c"/><rect x="590" y="93" width="180" height="175" rx="12" fill="#254d63" fill-opacity=".7" stroke="#75b7d5" stroke-width="3"/><path d="M662.0 268H698.0M680.0 250V286" stroke="#fb9a6c" stroke-width="5"/><circle cx="680.0" cy="268" r="8" fill="#fb9a6c"/>
+  </svg>

@@ -1,0 +1,26 @@
+{
+  "key": "poly_budget",
+  "label": "Triangle budget",
+  "category": "polycount",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Compare triangles in evaluated mesh (after modifiers) with the user-defined per-mesh budget.",
+  "illustration": "lod.svg",
+  "ru": {
+    "title": "Triangle budget",
+    "what": "После модификаторов число треугольников выше указанного бюджета.",
+    "why": "Большой меш может быть дорогим в определённых сценах; Nanite и LOD оцениваются отдельно.",
+    "fix": "Проверь назначение ассета, бюджет проекта и результаты Nanite/LOD тестов в UE5.",
+    "mechanism": "Считает треугольники вычисленной геометрии после модификаторов. Без заданного бюджета даёт информационный результат.",
+    "exceptions": "Количество треугольников — не прямой показатель FPS или эффективности Nanite."
+  },
+  "en": {
+    "title": "Triangle budget",
+    "what": "Triangle count after modifiers exceeds the configured budget.",
+    "why": "High triangle counts may be expensive in some scenes; Nanite and LOD suitability must be evaluated separately.",
+    "fix": "Check the asset role, project budget, and profiling results in UE5.",
+    "mechanism": "Counts evaluated triangles after modifiers. Without a configured budget, reports information rather than failure.",
+    "exceptions": "Triangle count alone does not predict FPS or Nanite efficiency."
+  }
+}

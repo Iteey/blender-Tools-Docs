@@ -1,0 +1,26 @@
+{
+  "key": "outside_uv",
+  "label": "UV outside 0-1",
+  "category": "uv",
+  "kind": "FACE",
+  "severity": "INFO",
+  "mode": "quick",
+  "hint": "Select faces with UV coordinates outside one tile. Normal for tiling textures or UDIM.",
+  "illustration": "uv.svg",
+  "ru": {
+    "title": "UV outside 0-1",
+    "what": "Некоторые UV находятся за пределами плитки 0–1.",
+    "why": "Это нормально для тайлинга и UDIM, но может быть ошибкой для уникальных атласов.",
+    "fix": "Проверь назначение UV. Переноси в 0–1 только если нужен единый атлас.",
+    "mechanism": "Ищет UV-координаты вне диапазона 0–1 активной карты.",
+    "exceptions": "Тайлинговые текстуры и UDIM не обязаны находиться в 0–1."
+  },
+  "en": {
+    "title": "UV outside 0-1",
+    "what": "Some UV coordinates lie outside the 0–1 tile.",
+    "why": "This is valid for tiling and UDIMs, but may be unsuitable for a unique 0–1 atlas.",
+    "fix": "Check your intended UV workflow. Move islands to 0–1 only when a single atlas is required.",
+    "mechanism": "Finds active UV coordinates outside 0–1.",
+    "exceptions": "Tiled materials and UDIMs need not remain inside 0–1."
+  }
+}

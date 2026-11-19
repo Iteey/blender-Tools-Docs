@@ -1,0 +1,26 @@
+{
+  "key": "missing_texture",
+  "label": "Missing external textures",
+  "category": "textures",
+  "kind": "OBJECT",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Find file-image nodes with no valid unpacked file path; packed images are OK. UDIM patterns are not guessed.",
+  "illustration": "textures.svg",
+  "ru": {
+    "title": "Missing external textures",
+    "what": "Некоторые внешние файлы изображений не найдены.",
+    "why": "Материал может потерять текстуры при переносе проекта.",
+    "fix": "Исправь путь к изображениям или упакуй их через File > External Data > Pack Resources.",
+    "mechanism": "Проверяет существование внешних файлов FILE-изображений; packed ресурсы исключаются.",
+    "exceptions": "Тайловые UDIM-пути здесь не распознаются специальным образом, поэтому возможны ложные срабатывания."
+  },
+  "en": {
+    "title": "Missing external textures",
+    "what": "Some referenced external image files cannot be found.",
+    "why": "Textures may be lost when moving the Blender project.",
+    "fix": "Fix image paths or pack assets using File > External Data > Pack Resources.",
+    "mechanism": "Checks whether external FILE image paths exist; packed images are accepted.",
+    "exceptions": "UDIM pattern paths are not specifically resolved, so false warnings are possible."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "key": "steep_smooth",
+  "label": "Strongly bent smooth faces",
+  "category": "normals",
+  "kind": "FACE",
+  "severity": "INFO",
+  "mode": "quick",
+  "hint": "Find neighboring smooth faces whose normal angle exceeds the selected angle and whose shared edge is not sharp. Artistic choice may be intentional.",
+  "illustration": "normals.svg",
+  "ru": {
+    "title": "Strongly bent smooth faces",
+    "what": "Сглаживание проходит через резкий угол между гранями.",
+    "why": "Это может давать нежелательные блики или артефакты нормалей.",
+    "fix": "Проверь шейдинг. При необходимости отметь ребро как Sharp или измени настройки сглаживания.",
+    "mechanism": "На сглаженных соседних гранях сравнивает угол между геометрическими нормалями.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Strongly bent smooth faces",
+    "what": "A smooth-shading transition crosses a steep angle between neighboring faces.",
+    "why": "This can create unwanted highlights or normal artifacts.",
+    "fix": "Inspect the shading; mark an edge Sharp or adjust smoothing when necessary.",
+    "mechanism": "Compares geometric-normal angles between adjacent smooth faces.",
+    "exceptions": ""
+  }
+}

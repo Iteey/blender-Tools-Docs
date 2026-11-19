@@ -1,0 +1,26 @@
+{
+  "key": "scale",
+  "label": "Unapplied Scale",
+  "category": "transform",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Check that Scale is (1, 1, 1), tolerance 0.0001.",
+  "illustration": "transforms.svg",
+  "ru": {
+    "title": "Unapplied Scale",
+    "what": "Scale объекта отличается от (1, 1, 1).",
+    "why": "Неожиданный масштаб может влиять на экспорт, коллизии и модификаторы.",
+    "fix": "Если пайплайн требует единичный масштаб: Object Mode > Ctrl+A > Scale. Проверь размеры после операции.",
+    "mechanism": "Сравнивает компоненты Scale с единицей (допуск 0,0001).",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Unapplied Scale",
+    "what": "The object Scale differs from (1, 1, 1).",
+    "why": "Unexpected scale can affect export, collisions, and modifiers.",
+    "fix": "If the pipeline requires unit scale, use Object Mode > Ctrl+A > Scale; verify dimensions afterward.",
+    "mechanism": "Compares Scale components to 1.0 (tolerance: 0.0001).",
+    "exceptions": ""
+  }
+}

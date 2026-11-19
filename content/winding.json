@@ -1,0 +1,26 @@
+{
+  "key": "winding",
+  "label": "Inconsistent face winding",
+  "category": "normals",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select both faces on a 2-face edge traversed in the same direction; whole inverted shells cannot be detected.",
+  "illustration": "winding.svg",
+  "ru": {
+    "title": "Inconsistent face winding",
+    "what": "Соседние грани используют общее ребро в одном направлении.",
+    "why": "Такие участки могут иметь несогласованные нормали и некорректный backface culling.",
+    "fix": "Выдели грани, проверь Face Orientation; для обычной цельной оболочки попробуй Shift+N (Recalculate Outside).",
+    "mechanism": "На рёбрах с двумя соседними гранями сравнивает направление обхода общего ребра.",
+    "exceptions": "Целиком перевёрнутая замкнутая оболочка может пройти эту проверку — см. Inverted Normals."
+  },
+  "en": {
+    "title": "Inconsistent face winding",
+    "what": "Adjacent faces traverse the same shared edge in the same direction.",
+    "why": "This can cause inconsistent face normals and backface culling.",
+    "fix": "Select the flagged faces and inspect Face Orientation. For a regular continuous shell, try Shift+N (Recalculate Outside).",
+    "mechanism": "Compares traversal direction along two-face shared edges.",
+    "exceptions": "A completely inverted closed shell can pass this check; see Inverted Normals."
+  }
+}

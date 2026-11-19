@@ -1,0 +1,26 @@
+{
+  "key": "zero_scale",
+  "label": "Zero Scale",
+  "category": "transform",
+  "kind": "OBJECT",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Check for an object scale component near zero.",
+  "illustration": "transforms.svg",
+  "ru": {
+    "title": "Zero Scale",
+    "what": "Один из компонентов масштаба почти равен нулю.",
+    "why": "Геометрия может схлопнуться или некорректно импортироваться.",
+    "fix": "Восстанови корректные значения масштаба объекта.",
+    "mechanism": "Ищет почти нулевые компоненты масштаба либо вырожденную мировую матрицу.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Zero Scale",
+    "what": "One or more scale components are nearly zero.",
+    "why": "The geometry may collapse or import incorrectly.",
+    "fix": "Restore valid scale values before exporting.",
+    "mechanism": "Finds near-zero scale components or a near-degenerate world matrix.",
+    "exceptions": ""
+  }
+}

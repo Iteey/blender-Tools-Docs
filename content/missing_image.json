@@ -1,0 +1,26 @@
+{
+  "key": "missing_image",
+  "label": "Empty image nodes",
+  "category": "textures",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Find image texture nodes without an image.",
+  "illustration": "textures.svg",
+  "ru": {
+    "title": "Empty image nodes",
+    "what": "У некоторых Image Texture nodes не назначено изображение.",
+    "why": "Материал может отобразиться не так, как задумано.",
+    "fix": "Открой Shader Editor и назначь изображение либо удали ненужный узел.",
+    "mechanism": "Ищет Image Texture nodes без назначенного изображения.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Empty image nodes",
+    "what": "Some Image Texture nodes have no image selected.",
+    "why": "The material may not display as intended.",
+    "fix": "Assign an image in Shader Editor or remove the unused node.",
+    "mechanism": "Finds Image Texture nodes with no image selected.",
+    "exceptions": ""
+  }
+}

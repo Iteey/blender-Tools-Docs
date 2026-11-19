@@ -1,0 +1,26 @@
+{
+  "key": "unassigned_faces",
+  "label": "Faces with missing material",
+  "category": "materials",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select faces referencing missing or empty slots.",
+  "illustration": "materials.svg",
+  "ru": {
+    "title": "Faces with missing material",
+    "what": "Грани ссылаются на пустой или отсутствующий слот материала.",
+    "why": "Часть геометрии может получить неправильный материал при импорте.",
+    "fix": "Выдели грани и назначь им корректный материал.",
+    "mechanism": "Проверяет Material Index у граней на пустые либо отсутствующие слоты.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Faces with missing material",
+    "what": "Faces reference a missing or empty material slot.",
+    "why": "Parts of the mesh may get the wrong material on import.",
+    "fix": "Select affected faces and assign a valid material.",
+    "mechanism": "Checks face material indices for missing or empty slots.",
+    "exceptions": ""
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "source": "UE5 Tools v0.4.2",
+  "categories": [
+    {
+      "key": "geometry",
+      "ru": "Геометрия и топология",
+      "en": "Geometry & topology",
+      "keys": [
+        "empty_mesh",
+        "ngons",
+        "nonmanifold",
+        "degenerate",
+        "zero_edges",
+        "duplicate_faces",
+        "loose_edges",
+        "loose_verts",
+        "boundary",
+        "nearverts"
+      ]
+    },
+    {
+      "key": "transform",
+      "ru": "Трансформации",
+      "en": "Transforms",
+      "keys": [
+        "scale",
+        "rotation",
+        "mirrored",
+        "zero_scale"
+      ]
+    },
+    {
+      "key": "normals",
+      "ru": "Нормали и сглаживание",
+      "en": "Normals & shading",
+      "keys": [
+        "winding",
+        "inverted_normals",
+        "steep_smooth"
+      ]
+    },
+    {
+      "key": "uv",
+      "ru": "UV-развёртка",
+      "en": "UV mapping",
+      "keys": [
+        "no_uv",
+        "collapsed_uv",
+        "outside_uv",
+        "uv_overlap",
+        "uv_stretch"
+      ]
+    },
+    {
+      "key": "materials",
+      "ru": "Материалы",
+      "en": "Materials",
+      "keys": [
+        "no_material",
+        "empty_slot",
+        "unassigned_faces",
+        "unused_materials"
+      ]
+    },
+    {
+      "key": "textures",
+      "ru": "Текстуры",
+      "en": "Textures",
+      "keys": [
+        "missing_image",
+        "missing_texture",
+        "big_texture"
+      ]
+    },
+    {
+      "key": "polycount",
+      "ru": "Полигоны",
+      "en": "Polycount",
+      "keys": [
+        "poly_budget"
+      ]
+    },
+    {
+      "key": "texel",
+      "ru": "Texel Density",
+      "en": "Texel density",
+      "keys": [
+        "texel_deviation",
+        "texel_target"
+      ]
+    },
+    {
+      "key": "pivot",
+      "ru": "Pivot / Origin",
+      "en": "Pivot / Origin",
+      "keys": [
+        "pivot"
+      ]
+    },
+    {
+      "key": "lightmap",
+      "ru": "Lightmap UV",
+      "en": "Lightmap UV",
+      "keys": [
+        "lightmap_missing",
+        "lightmap_bounds",
+        "lightmap_overlap"
+      ]
+    }
+  ]
+}

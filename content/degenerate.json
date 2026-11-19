@@ -1,0 +1,26 @@
+{
+  "key": "degenerate",
+  "label": "Degenerate geometry",
+  "category": "geometry",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select zero-area faces (area <= 1e-12).",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Degenerate geometry",
+    "what": "Есть грани практически нулевой площади.",
+    "why": "Они могут вызывать артефакты при импорте и триангуляции.",
+    "fix": "Выдели грани, удали вырожденные элементы и проверь геометрию.",
+    "mechanism": "Ищет грани с площадью не более 10⁻¹² в единицах Blender.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Degenerate geometry",
+    "what": "Some faces have almost zero surface area.",
+    "why": "These can produce artifacts during triangulation or import.",
+    "fix": "Select the affected faces, remove degenerate geometry, and inspect the repaired mesh.",
+    "mechanism": "Finds faces with area at or below 1e-12 in Blender units.",
+    "exceptions": ""
+  }
+}

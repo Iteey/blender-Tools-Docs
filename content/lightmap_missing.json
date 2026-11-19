@@ -1,0 +1,26 @@
+{
+  "key": "lightmap_missing",
+  "label": "Missing lightmap UV",
+  "category": "lightmap",
+  "kind": "OBJECT",
+  "severity": "ERROR",
+  "mode": "advanced",
+  "hint": "Look for the chosen lightmap UV channel; only when baked-lightmap checks are enabled.",
+  "illustration": "lightmap.svg",
+  "ru": {
+    "title": "Missing lightmap UV",
+    "what": "Не найден ожидаемый lightmap UV-канал.",
+    "why": "Запечённое освещение может работать некорректно, если проект требует lightmap UV.",
+    "fix": "Создай подходящий UV-канал или отключи проверку при полностью динамическом освещении.",
+    "mechanism": "Проверяет существование выбранного UV-канала при включённой проверке lightmap.",
+    "exceptions": "По умолчанию lightmap-аудит отключён; полностью динамическое освещение может не требовать канала."
+  },
+  "en": {
+    "title": "Missing lightmap UV",
+    "what": "The required lightmap UV channel is missing.",
+    "why": "Baked lighting may fail when the project relies on lightmap UVs.",
+    "fix": "Create the expected channel, or disable this audit if you use fully dynamic lighting.",
+    "mechanism": "Checks for the selected UV channel when baked-lightmap checking is enabled.",
+    "exceptions": "Lightmap audit is off by default; fully dynamic lighting may not need this channel."
+  }
+}

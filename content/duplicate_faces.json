@@ -1,0 +1,26 @@
+{
+  "key": "duplicate_faces",
+  "label": "Duplicate faces",
+  "category": "geometry",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select faces sharing exactly the same vertex set.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Duplicate faces",
+    "what": "Несколько граней используют одинаковый набор вершин.",
+    "why": "Перекрытие может вызвать мерцание, ошибки запекания и лишнюю геометрию.",
+    "fix": "Найди дубликаты и удали лишние грани, не повреждая нужную поверхность.",
+    "mechanism": "Сопоставляет неориентированные наборы индексов вершин граней.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Duplicate faces",
+    "what": "Multiple faces use the same set of vertex indices.",
+    "why": "Coincident faces can produce flicker, baking errors, and unnecessary geometry.",
+    "fix": "Find duplicates and remove extra faces without damaging the desired surface.",
+    "mechanism": "Compares unordered sets of vertex indices used by faces.",
+    "exceptions": ""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "key": "loose_edges",
+  "label": "Loose edges",
+  "category": "geometry",
+  "kind": "EDGE",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Select edges not belonging to any face.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Loose edges",
+    "what": "Есть рёбра, которые не входят ни в одну грань.",
+    "why": "Они не образуют отображаемую поверхность игрового меша.",
+    "fix": "Если они не нужны для дальнейшей работы, удали Loose Geometry.",
+    "mechanism": "Ищет рёбра, к которым не примыкает ни одна грань.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Loose edges",
+    "what": "Some edges do not belong to any polygon face.",
+    "why": "They do not form a drawable surface in a typical game mesh.",
+    "fix": "Remove unnecessary loose geometry after checking whether it is still needed for modeling.",
+    "mechanism": "Finds edges that do not belong to any polygon.",
+    "exceptions": ""
+  }
+}

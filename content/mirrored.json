@@ -1,0 +1,26 @@
+{
+  "key": "mirrored",
+  "label": "Negative/mirrored Scale",
+  "category": "transform",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Check whether the world transform matrix has negative determinant.",
+  "illustration": "transforms.svg",
+  "ru": {
+    "title": "Negative/mirrored Scale",
+    "what": "Мировой трансформ имеет отрицательный определитель (зеркальное отражение).",
+    "why": "Зеркальный масштаб может менять ориентацию треугольников при экспорте.",
+    "fix": "Проверь Face Orientation и полученный FBX; при необходимости Apply Scale и пересчитай нормали.",
+    "mechanism": "Проверяет знак определителя мировой матрицы объекта.",
+    "exceptions": "Может быть намеренное зеркалирование; важно проверить итоговые нормали после экспорта."
+  },
+  "en": {
+    "title": "Negative/mirrored Scale",
+    "what": "The world transform has a negative determinant (mirrored orientation).",
+    "why": "Mirroring can alter triangle orientation when exporting.",
+    "fix": "Inspect Face Orientation and the imported mesh; apply scale and recalculate normals only if required.",
+    "mechanism": "Checks the sign of the object world-matrix determinant.",
+    "exceptions": "Mirroring may be intentional; verify final normals after export."
+  }
+}

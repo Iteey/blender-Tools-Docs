@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="Available versus missing image texture">
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#283347" stroke-width=".8"/></pattern>
+  <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#5bd6bf" stroke-width="1.8"/></marker>
+  <marker id="red" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#fb7f80" stroke-width="1.8"/></marker></defs>
+  <rect width="900" height="320" rx="22" fill="#111827"/><rect width="900" height="320" rx="22" fill="url(#grid)" opacity=".58"/>
+  <text x="450" y="47" fill="#e5edf7" font-size="26" font-family="Arial, sans-serif" text-anchor="middle">Texture assets</text><rect x="140" y="83" width="260" height="168" rx="11" stroke="#5bd6bf" stroke-width="3" fill="#202e42"/><path d="M160 217l56-58 44 35 57-66 62 89" fill="none" stroke="#5bd6bf" stroke-width="5"/><text x="270" y="283" fill="#5bd6bf" font-size="20" font-family="Arial, sans-serif" text-anchor="middle">Assigned image</text><rect x="510" y="83" width="260" height="168" rx="11" stroke="#fb7f80" stroke-width="3" fill="#202e42"/><path d="M530 217l56-58 44 35 57-66 62 89" fill="none" stroke="#fb7f80" stroke-width="5"/><text x="640" y="283" fill="#fb7f80" font-size="20" font-family="Arial, sans-serif" text-anchor="middle">Missing file</text>
+  </svg>

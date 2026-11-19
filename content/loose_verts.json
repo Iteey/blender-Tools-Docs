@@ -1,0 +1,26 @@
+{
+  "key": "loose_verts",
+  "label": "Loose vertices",
+  "category": "geometry",
+  "kind": "VERT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Select vertices not connected to any edge.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Loose vertices",
+    "what": "Есть вершины, не соединённые с рёбрами.",
+    "why": "Такие вершины обычно не нужны для экспорта Static Mesh.",
+    "fix": "Выдели и удали ненужные изолированные вершины.",
+    "mechanism": "Ищет вершины, у которых нет связанных рёбер.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Loose vertices",
+    "what": "Some vertices are not connected to any edges.",
+    "why": "Isolated vertices normally add no useful data to a Static Mesh export.",
+    "fix": "Select and delete unneeded isolated vertices.",
+    "mechanism": "Finds vertices without connected edges.",
+    "exceptions": ""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "key": "texel_target",
+  "label": "Texel Density target",
+  "category": "texel",
+  "kind": "FACE",
+  "severity": "WARN",
+  "mode": "advanced",
+  "hint": "Select faces whose estimated texel density differs from the configured px/m target.",
+  "illustration": "texel.svg",
+  "ru": {
+    "title": "Texel Density target",
+    "what": "Расчётная плотность отличается от заданной цели.",
+    "why": "Ассет может отличаться от стандарта плотности в проекте.",
+    "fix": "Измени масштаб UV-островов или целевое значение, если оно не соответствует пайплайну.",
+    "mechanism": "Сравнивает расчётную плотность с заданной целью px/m; если цель не задана, только информирует.",
+    "exceptions": "Если целевое значение не задано, сравнение с нормативом не выполняется."
+  },
+  "en": {
+    "title": "Texel Density target",
+    "what": "Estimated pixel density differs from the configured target.",
+    "why": "The asset may not meet the project’s texel-density convention.",
+    "fix": "Adjust island scale or update the target if the setting does not match the project.",
+    "mechanism": "Compares estimated density to the configured px/m target; provides information when unset.",
+    "exceptions": "No compliance check is possible when the target is unset."
+  }
+}

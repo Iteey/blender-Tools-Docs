@@ -1,0 +1,26 @@
+{
+  "key": "zero_edges",
+  "label": "Zero-length edges",
+  "category": "geometry",
+  "kind": "EDGE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select edges whose vertices are at most 1e-6 units apart.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Zero-length edges",
+    "what": "У некоторых рёбер почти совпадают концевые вершины.",
+    "why": "Нулевые рёбра усложняют обработку и могут портить нормали.",
+    "fix": "Выдели рёбра; при необходимости используй Merge by Distance.",
+    "mechanism": "Сравнивает координаты двух вершин каждого ребра (порог 10⁻⁶ BU).",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Zero-length edges",
+    "what": "Some edges join vertices at nearly identical positions.",
+    "why": "Zero-length edges complicate processing and can affect normals.",
+    "fix": "Inspect the selected edges; use Merge by Distance only where the points should actually merge.",
+    "mechanism": "Measures each edge’s endpoints (threshold: 1e-6 Blender units).",
+    "exceptions": ""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "key": "inverted_normals",
+  "label": "Inverted normals (closed shells)",
+  "category": "normals",
+  "kind": "FACE",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Check potentially inward-facing closed outer shells. Open or nested shells cannot always be classified.",
+  "illustration": "normals.svg",
+  "ru": {
+    "title": "Inverted normals (closed shells)",
+    "what": "Замкнутая внешняя оболочка имеет отрицательный ориентированный объём — вероятно, все её грани направлены внутрь.",
+    "why": "В UE5 может быть видна обратная сторона поверхности, а лицевая — отсекаться.",
+    "fix": "Нажми на название проверки, чтобы выделить грани. В Edit Mode включи Face Orientation и проверь. Для обычной оболочки: Shift+N. Для полостей и особой геометрии сначала оцени вручную.",
+    "mechanism": "Анализирует замкнутые оболочки с помощью ориентированного объёма. Открытые и вложенные оболочки требуют осторожности.",
+    "exceptions": "Для открытой сетки, внутренних полостей и вложенных оболочек алгоритм может не определить «наружу». Отрицательный Scale проверяется отдельно."
+  },
+  "en": {
+    "title": "Inverted normals (closed shells)",
+    "what": "A closed outer shell has negative signed volume: its faces may all point inward.",
+    "why": "The exterior can be culled, and the wrong side of the surface may be visible in UE5.",
+    "fix": "Select flagged faces and inspect Blender Face Orientation. Use Shift+N for an ordinary closed shell; manually review nested cavities and special cases.",
+    "mechanism": "Uses signed volume to analyze closed shells; open and nested shells are ambiguous.",
+    "exceptions": "Open meshes, cavities, and nested shells may not have a reliably classified exterior. Negative Scale is checked separately."
+  }
+}

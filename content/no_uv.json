@@ -1,0 +1,26 @@
+{
+  "key": "no_uv",
+  "label": "Missing UV map",
+  "category": "uv",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Check whether an active UV layer exists.",
+  "illustration": "uv.svg",
+  "ru": {
+    "title": "Missing UV map",
+    "what": "У меша нет активной UV-карты.",
+    "why": "Для обычных текстурных материалов в UE5 чаще всего нужны UV; для процедурных материалов — не всегда.",
+    "fix": "Если ассету нужны текстуры, создай UV-развёртку и проверь её в UV Editor.",
+    "mechanism": "Проверяет наличие активной UV-карты.",
+    "exceptions": "Процедурным и world-space материалам UV иногда не нужны."
+  },
+  "en": {
+    "title": "Missing UV map",
+    "what": "The mesh has no active UV map.",
+    "why": "Most image-textured materials need UVs in UE5, but procedural approaches may not.",
+    "fix": "Create and inspect UVs if the asset requires image textures.",
+    "mechanism": "Checks for an active UV layer.",
+    "exceptions": "Procedural and world-space materials may not need UVs."
+  }
+}

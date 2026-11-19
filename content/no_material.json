@@ -1,0 +1,26 @@
+{
+  "key": "no_material",
+  "label": "No material assigned",
+  "category": "materials",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "No material is present in any material slot.",
+  "illustration": "materials.svg",
+  "ru": {
+    "title": "No material assigned",
+    "what": "В слотах не найден назначенный материал Blender.",
+    "why": "При импорте может потребоваться вручную назначить материал в UE5.",
+    "fix": "Назначь материал, если это принято в вашем экспортном пайплайне.",
+    "mechanism": "Ищет хоть один непустой материал в слотах объекта.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "No material assigned",
+    "what": "No Blender material is assigned in any slot.",
+    "why": "You may need to assign materials manually after UE5 import.",
+    "fix": "Assign a material if the export pipeline expects it.",
+    "mechanism": "Checks if any object material slot contains a material.",
+    "exceptions": ""
+  }
+}

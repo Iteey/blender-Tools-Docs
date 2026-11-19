@@ -1,0 +1,26 @@
+{
+  "key": "empty_mesh",
+  "label": "Empty mesh",
+  "category": "geometry",
+  "kind": "OBJECT",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Mesh has no polygon faces to export.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Empty mesh",
+    "what": "В объекте нет полигонов.",
+    "why": "Пустому Static Mesh нечего отображать в UE5.",
+    "fix": "Проверь объект в Edit Mode; создай или восстанови нужную геометрию.",
+    "mechanism": "Проверяет, что у исходной сетки есть полигоны.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Empty mesh",
+    "what": "The mesh contains no polygon faces.",
+    "why": "An empty Static Mesh has no drawable surface in UE5.",
+    "fix": "Inspect the object in Edit Mode and restore or create the intended geometry.",
+    "mechanism": "Checks whether the source mesh contains any polygon faces.",
+    "exceptions": ""
+  }
+}

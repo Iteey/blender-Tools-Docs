@@ -1,0 +1,26 @@
+{
+  "key": "boundary",
+  "label": "Open boundary edges",
+  "category": "geometry",
+  "kind": "EDGE",
+  "severity": "INFO",
+  "mode": "advanced",
+  "hint": "Select edges used by exactly one face; holes may be intentional.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Open boundary edges",
+    "what": "Найдены открытые границы поверхности.",
+    "why": "Для закрытых пропсов это может указывать на отверстия; для плоскостей и листьев это нормально.",
+    "fix": "Проверь выделенные рёбра. Закрывай отверстия только там, где действительно нужна цельная оболочка.",
+    "mechanism": "Ищет рёбра, принадлежащие ровно одной грани. Выполняется в Advanced.",
+    "exceptions": "Открытые поверхности, листья и плоскости часто намеренны."
+  },
+  "en": {
+    "title": "Open boundary edges",
+    "what": "The mesh contains edges used by exactly one face.",
+    "why": "These may indicate holes in closed props, but are normal for planes, leaves, and some other assets.",
+    "fix": "Review the edges. Close holes only if the asset is intended to form a closed shell.",
+    "mechanism": "Finds edges used by exactly one face. Runs in Advanced mode.",
+    "exceptions": "Leaves, planes, and intentionally open surfaces are often valid."
+  }
+}

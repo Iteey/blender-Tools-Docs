@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="Non-manifold shared edge">
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#283347" stroke-width=".8"/></pattern>
+  <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#5bd6bf" stroke-width="1.8"/></marker>
+  <marker id="red" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#fb7f80" stroke-width="1.8"/></marker></defs>
+  <rect width="900" height="320" rx="22" fill="#111827"/><rect width="900" height="320" rx="22" fill="url(#grid)" opacity=".58"/>
+  <text x="450" y="50" fill="#e5edf7" font-size="27" font-family="Arial, sans-serif" text-anchor="middle">Three faces share one edge</text><polygon points="310,95 450,165 450,262" fill="#1f4c52" stroke="#93a4c5" stroke-width="3" stroke-linejoin="round"/><polygon points="450,165 590,95 450,262" fill="#39395c" stroke="#93a4c5" stroke-width="3" stroke-linejoin="round"/><polygon points="450,165 495,255 450,262" fill="#603a50" stroke="#93a4c5" stroke-width="3" stroke-linejoin="round"/><path d="M450 165L450 262" stroke="#ff797f" stroke-width="7" stroke-linecap="round"/><text x="450" y="295" fill="#ff9292" font-size="19" font-family="Arial, sans-serif" text-anchor="middle">3 faces → non-manifold edge</text>
+  </svg>

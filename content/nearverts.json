@@ -1,0 +1,26 @@
+{
+  "key": "nearverts",
+  "label": "Nearby vertices",
+  "category": "geometry",
+  "kind": "VERT",
+  "severity": "INFO",
+  "mode": "advanced",
+  "hint": "Find potential duplicates using BMesh find_doubles and the merge distance; intentional close vertices are possible.",
+  "illustration": "topology.svg",
+  "ru": {
+    "title": "Nearby vertices",
+    "what": "Некоторые вершины расположены очень близко друг к другу.",
+    "why": "Они могут быть неслитыми дубликатами, но могут также образовывать намеренные разрывы UV или геометрии.",
+    "fix": "Проверь выделение. Используй Merge by Distance только если объединение не повредит меш.",
+    "mechanism": "Использует BMesh find_doubles с настраиваемым расстоянием; ограничение на число вершин.",
+    "exceptions": "Близкие точки на швах могут быть намеренными; проверка ограничена по размеру меша."
+  },
+  "en": {
+    "title": "Nearby vertices",
+    "what": "Some vertices are very close to one another.",
+    "why": "They may be unmerged duplicates, or intentional seams and gaps.",
+    "fix": "Inspect the selected vertices. Merge by Distance only if merging will not harm the model.",
+    "mechanism": "Uses BMesh find_doubles with a configurable radius and vertex-count safety limit.",
+    "exceptions": "Close vertices at seams may be intentional; the scan has a size limit."
+  }
+}

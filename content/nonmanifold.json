@@ -1,0 +1,26 @@
+{
+  "key": "nonmanifold",
+  "label": "Non-manifold edges",
+  "category": "geometry",
+  "kind": "EDGE",
+  "severity": "ERROR",
+  "mode": "quick",
+  "hint": "Select edges touching three or more faces.",
+  "illustration": "nonmanifold.svg",
+  "ru": {
+    "title": "Non-manifold edges",
+    "what": "Некоторые рёбра принадлежат более чем двум граням.",
+    "why": "Сложная топология может нарушать нормали, запекание и обработку меша.",
+    "fix": "Выдели рёбра; убери дубликаты и лишние внутренние поверхности. Проверь, нужны ли соединённые оболочки.",
+    "mechanism": "Ищет рёбра, которые принадлежат трём и более граням. Граничные рёбра рассматриваются отдельно.",
+    "exceptions": "Проверка не считает открытые границы non-manifold; для них есть отдельный пункт."
+  },
+  "en": {
+    "title": "Non-manifold edges",
+    "what": "Some edges belong to more than two faces.",
+    "why": "Complex topology can interfere with normals, baking, and mesh processing.",
+    "fix": "Inspect the edges; remove duplicated or unnecessary internal surfaces. Keep intended intersections if the pipeline permits them.",
+    "mechanism": "Finds edges connected to three or more faces. Boundary edges have a separate check.",
+    "exceptions": "Open boundaries are not classified here as non-manifold; they have their own check."
+  }
+}

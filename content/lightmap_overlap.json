@@ -1,0 +1,26 @@
+{
+  "key": "lightmap_overlap",
+  "label": "Lightmap UV overlap",
+  "category": "lightmap",
+  "kind": "FACE",
+  "severity": "ERROR",
+  "mode": "advanced",
+  "hint": "Detect positive-area overlap in lightmap UV channel, ignoring shared-only edges; limited by UV-analysis budget.",
+  "illustration": "lightmap.svg",
+  "ru": {
+    "title": "Lightmap UV overlap",
+    "what": "Lightmap UV-острова перекрываются.",
+    "why": "В запечённом освещении это может вызвать световые артефакты.",
+    "fix": "Раздели перекрывающиеся UV-острова с достаточными отступами.",
+    "mechanism": "На выбранном lightmap UV ищет пересечение UV-треугольников; действует лимит анализа.",
+    "exceptions": "Не учитывает толщину padding по разрешению lightmap. Есть ограничение размера проверки."
+  },
+  "en": {
+    "title": "Lightmap UV overlap",
+    "what": "Lightmap UV islands overlap.",
+    "why": "Baked lighting can show illumination artifacts.",
+    "fix": "Separate islands and leave appropriate padding between them.",
+    "mechanism": "Checks for intersecting triangles in the selected lightmap UV, subject to scan limits.",
+    "exceptions": "Does not validate padding against lightmap resolution. Scan size is bounded."
+  }
+}

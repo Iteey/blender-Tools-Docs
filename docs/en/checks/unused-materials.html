@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Some material slots are present but no faces use them."><meta name="color-scheme" content="dark light">
+<title>Unused material slots · UE5 Tools</title><link rel="stylesheet" href="../../assets/style.css">
+<link rel="icon" type="image/svg+xml" href="../../assets/logo.svg"></head>
+<body data-language="en">
+<div class="mobile-overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar"><a class="brand" href="../index.html"><span class="brand-mark">U<span>5</span></span><span><strong>UE5 Tools</strong><small>Documentation · v0.4.2</small></span></a>
+<div class="sidebar-controls"><label class="search-field"><span class="magnifier">⌕</span><input type="search" id="search" autocomplete="off" placeholder="Search checks…" aria-label="Search checks…"></label><div id="search-empty" class="search-empty" hidden>No matches</div></div>
+<nav class="navigation" aria-label="Documentation navigation"><a href="../index.html" class="nav-home ">⌂ &nbsp;Home</a>
+<a class="nav-home" href="../guides/getting-started.html">◈ &nbsp;Getting started</a>
+<a class="nav-home" href="../guides/nanite-vs-lod.html">△ &nbsp;Nanite / LOD Advisor</a>
+<div class="nav-category"><a class="nav-heading " href="../categories/geometry.html">Geometry &amp; topology<span>10</span></a>
+<a class="nav-check " href="../checks/empty-mesh.html" data-search="empty mesh в объекте нет полигонов. the mesh contains no polygon faces.">Empty mesh</a>
+<a class="nav-check " href="../checks/ngons.html" data-search="n-gons есть грани с пятью и более вершинами. some faces have five or more vertices.">N-gons</a>
+<a class="nav-check " href="../checks/nonmanifold.html" data-search="non-manifold edges некоторые рёбра принадлежат более чем двум граням. some edges belong to more than two faces.">Non-manifold edges</a>
+<a class="nav-check " href="../checks/degenerate.html" data-search="degenerate geometry есть грани практически нулевой площади. some faces have almost zero surface area.">Degenerate geometry</a>
+<a class="nav-check " href="../checks/zero-edges.html" data-search="zero-length edges у некоторых рёбер почти совпадают концевые вершины. some edges join vertices at nearly identical positions.">Zero-length edges</a>
+<a class="nav-check " href="../checks/duplicate-faces.html" data-search="duplicate faces несколько граней используют одинаковый набор вершин. multiple faces use the same set of vertex indices.">Duplicate faces</a>
+<a class="nav-check " href="../checks/loose-edges.html" data-search="loose edges есть рёбра, которые не входят ни в одну грань. some edges do not belong to any polygon face.">Loose edges</a>
+<a class="nav-check " href="../checks/loose-verts.html" data-search="loose vertices есть вершины, не соединённые с рёбрами. some vertices are not connected to any edges.">Loose vertices</a>
+<a class="nav-check " href="../checks/boundary.html" data-search="open boundary edges найдены открытые границы поверхности. the mesh contains edges used by exactly one face.">Open boundary edges</a>
+<a class="nav-check " href="../checks/nearverts.html" data-search="nearby vertices некоторые вершины расположены очень близко друг к другу. some vertices are very close to one another.">Nearby vertices</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/transform.html">Transforms<span>4</span></a>
+<a class="nav-check " href="../checks/scale.html" data-search="unapplied scale scale объекта отличается от (1, 1, 1). the object scale differs from (1, 1, 1).">Unapplied Scale</a>
+<a class="nav-check " href="../checks/rotation.html" data-search="unapplied rotation у объекта есть неприменённый rotation. the object has unapplied rotation.">Unapplied Rotation</a>
+<a class="nav-check " href="../checks/mirrored.html" data-search="negative/mirrored scale мировой трансформ имеет отрицательный определитель (зеркальное отражение). the world transform has a negative determinant (mirrored orientation).">Negative/mirrored Scale</a>
+<a class="nav-check " href="../checks/zero-scale.html" data-search="zero scale один из компонентов масштаба почти равен нулю. one or more scale components are nearly zero.">Zero Scale</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/normals.html">Normals &amp; shading<span>3</span></a>
+<a class="nav-check " href="../checks/winding.html" data-search="inconsistent face winding соседние грани используют общее ребро в одном направлении. adjacent faces traverse the same shared edge in the same direction.">Inconsistent face winding</a>
+<a class="nav-check " href="../checks/inverted-normals.html" data-search="inverted normals (closed shells) замкнутая внешняя оболочка имеет отрицательный ориентированный объём — вероятно, все её грани направлены внутрь. a closed outer shell has negative signed volume: its faces may all point inward.">Inverted normals (closed shells)</a>
+<a class="nav-check " href="../checks/steep-smooth.html" data-search="strongly bent smooth faces сглаживание проходит через резкий угол между гранями. a smooth-shading transition crosses a steep angle between neighboring faces.">Strongly bent smooth faces</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/uv.html">UV mapping<span>5</span></a>
+<a class="nav-check " href="../checks/no-uv.html" data-search="missing uv map у меша нет активной uv-карты. the mesh has no active uv map.">Missing UV map</a>
+<a class="nav-check " href="../checks/collapsed-uv.html" data-search="collapsed uv faces uv-грани имеют практически нулевую площадь. some uv polygons have nearly zero area.">Collapsed UV faces</a>
+<a class="nav-check " href="../checks/outside-uv.html" data-search="uv outside 0-1 некоторые uv находятся за пределами плитки 0–1. some uv coordinates lie outside the 0–1 tile.">UV outside 0-1</a>
+<a class="nav-check " href="../checks/uv-overlap.html" data-search="uv overlap обнаружено перекрытие uv-треугольников. some uv triangles overlap with a positive area.">UV overlap</a>
+<a class="nav-check " href="../checks/uv-stretch.html" data-search="uv distortion соотношение длин рёбер в uv сильно отличается от 3d-геометрии. relative edge lengths differ substantially between uv and 3d geometry.">UV distortion</a>
+</div>
+<div class="nav-category"><a class="nav-heading active" href="../categories/materials.html">Materials<span>4</span></a>
+<a class="nav-check " href="../checks/no-material.html" data-search="no material assigned в слотах не найден назначенный материал blender. no blender material is assigned in any slot.">No material assigned</a>
+<a class="nav-check " href="../checks/empty-slot.html" data-search="empty material slots в списке материалов имеются пустые слоты. some material slots do not contain a material.">Empty material slots</a>
+<a class="nav-check " href="../checks/unassigned-faces.html" data-search="faces with missing material грани ссылаются на пустой или отсутствующий слот материала. faces reference a missing or empty material slot.">Faces with missing material</a>
+<a class="nav-check selected" href="../checks/unused-materials.html" data-search="unused material slots материалы есть в слотах, но ни одна грань ими не пользуется. some material slots are present but no faces use them.">Unused material slots</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/textures.html">Textures<span>3</span></a>
+<a class="nav-check " href="../checks/missing-image.html" data-search="empty image nodes у некоторых image texture nodes не назначено изображение. some image texture nodes have no image selected.">Empty image nodes</a>
+<a class="nav-check " href="../checks/missing-texture.html" data-search="missing external textures некоторые внешние файлы изображений не найдены. some referenced external image files cannot be found.">Missing external textures</a>
+<a class="nav-check " href="../checks/big-texture.html" data-search="oversized textures размер текстуры превышает установленный лимит. an image exceeds the configured maximum resolution.">Oversized textures</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/polycount.html">Polycount<span>1</span></a>
+<a class="nav-check " href="../checks/poly-budget.html" data-search="triangle budget после модификаторов число треугольников выше указанного бюджета. triangle count after modifiers exceeds the configured budget.">Triangle budget</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/texel.html">Texel density<span>2</span></a>
+<a class="nav-check " href="../checks/texel-deviation.html" data-search="inconsistent texel density расчётная плотность пикселей различается между гранями. estimated pixel density varies considerably between faces.">Inconsistent Texel Density</a>
+<a class="nav-check " href="../checks/texel-target.html" data-search="texel density target расчётная плотность отличается от заданной цели. estimated pixel density differs from the configured target.">Texel Density target</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/pivot.html">Pivot / Origin<span>1</span></a>
+<a class="nav-check " href="../checks/pivot.html" data-search="pivot / origin position origin объекта находится не в ожидаемой позиции. the object origin is not at the configured expected location.">Pivot / Origin position</a>
+</div>
+<div class="nav-category"><a class="nav-heading " href="../categories/lightmap.html">Lightmap UV<span>3</span></a>
+<a class="nav-check " href="../checks/lightmap-missing.html" data-search="missing lightmap uv не найден ожидаемый lightmap uv-канал. the required lightmap uv channel is missing.">Missing lightmap UV</a>
+<a class="nav-check " href="../checks/lightmap-bounds.html" data-search="lightmap uv outside 0-1 в lightmap uv есть грани вне 0–1 или с нулевой площадью. the lightmap uv channel contains out-of-bounds or zero-area faces.">Lightmap UV outside 0-1</a>
+<a class="nav-check " href="../checks/lightmap-overlap.html" data-search="lightmap uv overlap lightmap uv-острова перекрываются. lightmap uv islands overlap.">Lightmap UV overlap</a>
+</div></nav>
+<div class="sidebar-foot"><span class="live-dot"></span> Based on UE5 Tools v0.4.2 source</div></aside>
+<div class="app-shell"><header class="topbar"><button class="mobile-menu" id="menu-button" aria-label="Menu">☰</button>
+<a class="topbar-home" href="../index.html">UE5 Tools <span>/ Docs</span></a><div class="top-actions">
+<a class="action" href="../../ru/checks/unused-materials.html" lang="ru" title="Language">◎ Русский</a>
+<button id="theme-button" class="action" title="Theme" aria-label="Theme">◐</button>
+</div></header>
+<main class="content"><div class="breadcrumbs"><a href="../index.html">Home</a><span>/</span><a href="../categories/materials.html">Materials</a><span>/</span><span>Unused material slots</span></div>
+<div class="article-head"><div class="eyebrow">CHECK / UNUSED_MATERIALS</div><h1>Unused material slots</h1>
+<p class="subline">Some material slots are present but no faces use them.</p>
+<div class="meta"><span class="pill pill-neutral">Info</span>
+<span class="pill">Quick + Advanced</span><span class="pill">Object</span></div></div>
+<figure class="diagram"><img src="../../assets/diagrams/materials.svg" alt="Unused material slots" loading="lazy"/><figcaption>Concept illustration, not a screenshot of a detected issue.</figcaption></figure>
+<div class="article-grid"><article class="prose"><h2 id="what">What it checks</h2>
+<p>Some material slots are present but no faces use them.</p>
+<h2 id="mechanism">How detection works</h2>
+<p>Compares material slots with the indices referenced by faces.</p>
+<h2 id="why">Why it matters for UE5</h2>
+<p>Unused slots make the asset harder to maintain.</p>
+<h2 id="fix">How to fix</h2>
+<p>Remove unused slots only if they are not part of the established pipeline.</p>
+
+<div class="callout"><strong>✦ How to use this result</strong><p>In Blender, click the detected issue label to select the affected elements. The scan never fixes the mesh automatically.</p></div>
+</article><aside class="article-aside"><div class="aside-sticky"><h3>On this page</h3>
+<a href="#what">What it checks</a>
+<a href="#mechanism">How detection works</a>
+<a href="#why">Why it matters</a>
+<a href="#fix">How to fix</a>
+<p>Not every warning indicates an error. Consider the asset purpose and project requirements.</p></div></aside></div>
+<div class="source-note">The documentation describes v0.4.2 behavior; it does not guarantee correct export or UE5 performance.</div><div class="pager"><a class="pager-link" href="unassigned-faces.html"><small>← Previous</small><strong>Faces with missing material</strong></a><a class="pager-link right" href="missing-image.html"><small>Next →</small><strong>Empty image nodes</strong></a></div></main><footer class="page-footer"><span>Based on UE5 Tools v0.4.2 source</span><span>© UE5 Tools · Community documentation</span></footer></div>
+<script defer src="../../assets/app.js"></script></body></html>

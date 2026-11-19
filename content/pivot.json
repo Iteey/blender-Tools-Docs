@@ -1,0 +1,26 @@
+{
+  "key": "pivot",
+  "label": "Pivot / Origin position",
+  "category": "pivot",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "advanced",
+  "hint": "Compare object origin against chosen world/bounds center/bounds bottom target, tolerance relative to bounds size.",
+  "illustration": "pivot.svg",
+  "ru": {
+    "title": "Pivot / Origin position",
+    "what": "Origin объекта находится не в ожидаемой позиции.",
+    "why": "Это может влиять на снаппинг, размещение и вращение Static Mesh в UE5.",
+    "fix": "Проверь требование проекта. Перемести Origin к нужному месту инструментом Origin Tools.",
+    "mechanism": "Сравнивает Origin с выбранным центром, низом bounding box или нулём мира.",
+    "exceptions": "Расположение Origin зависит от соглашений проекта, а не универсального правила."
+  },
+  "en": {
+    "title": "Pivot / Origin position",
+    "what": "The object origin is not at the configured expected location.",
+    "why": "This can affect snapping, placement, and rotation of Static Meshes in UE5.",
+    "fix": "Check project conventions, then place the origin using Origin tools.",
+    "mechanism": "Compares origin with chosen bounds center, bounds bottom, or world origin.",
+    "exceptions": "Origin placement is project-specific, not governed by a universal rule."
+  }
+}

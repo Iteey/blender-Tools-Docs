@@ -1,0 +1,26 @@
+{
+  "key": "big_texture",
+  "label": "Oversized textures",
+  "category": "textures",
+  "kind": "OBJECT",
+  "severity": "INFO",
+  "mode": "quick",
+  "hint": "Image width or height exceeds the user-selected max texture size.",
+  "illustration": "textures.svg",
+  "ru": {
+    "title": "Oversized textures",
+    "what": "Размер текстуры превышает установленный лимит.",
+    "why": "Это может повышать расход видеопамяти и место на диске.",
+    "fix": "Сравни реальный экранный размер ассета и требования проекта; уменьши разрешение при необходимости.",
+    "mechanism": "Сравнивает размер изображения с установленным максимальным разрешением.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Oversized textures",
+    "what": "An image exceeds the configured maximum resolution.",
+    "why": "Very large textures can increase VRAM and disk use.",
+    "fix": "Compare resolution to the asset’s screen-space usage and project budget; downsize only when justified.",
+    "mechanism": "Checks image dimensions against the configured maximum.",
+    "exceptions": ""
+  }
+}

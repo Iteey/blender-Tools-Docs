@@ -1,0 +1,26 @@
+{
+  "key": "empty_slot",
+  "label": "Empty material slots",
+  "category": "materials",
+  "kind": "OBJECT",
+  "severity": "WARN",
+  "mode": "quick",
+  "hint": "Count material slots with no material datablock.",
+  "illustration": "materials.svg",
+  "ru": {
+    "title": "Empty material slots",
+    "what": "В списке материалов имеются пустые слоты.",
+    "why": "Пустые слоты могут запутывать назначение материалов после импорта.",
+    "fix": "Заполни нужные слоты материалами или удали лишние.",
+    "mechanism": "Подсчитывает пустые слоты материалов.",
+    "exceptions": ""
+  },
+  "en": {
+    "title": "Empty material slots",
+    "what": "Some material slots do not contain a material.",
+    "why": "Empty slots can cause confusion when assigning materials after import.",
+    "fix": "Fill required slots or remove those that are unnecessary.",
+    "mechanism": "Counts material slots without a material datablock.",
+    "exceptions": ""
+  }
+}

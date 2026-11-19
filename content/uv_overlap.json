@@ -1,0 +1,26 @@
+{
+  "key": "uv_overlap",
+  "label": "UV overlap",
+  "category": "uv",
+  "kind": "FACE",
+  "severity": "WARN",
+  "mode": "advanced",
+  "hint": "Triangulate UV polygons; use spatial buckets and positive-area triangle intersection. Adjacent faces sharing only an edge are not counted. Limited by UV-analysis budget.",
+  "illustration": "uv.svg",
+  "ru": {
+    "title": "UV overlap",
+    "what": "Обнаружено перекрытие UV-треугольников.",
+    "why": "Это допустимо для зеркальных/повторяемых текстур, но плохо для уникального бейка и lightmap.",
+    "fix": "Проверь UV Editor. Разведи острова только там, где нужен уникальный UV-атлас.",
+    "mechanism": "Триангулирует UV-полигоны и ищет пересечение положительной площади. Ограничивает размер анализа и число пар.",
+    "exceptions": "Наложение может быть намеренным (mirrored/stacked UV). Ограничение сложности вызывает SKIP, а не PASS."
+  },
+  "en": {
+    "title": "UV overlap",
+    "what": "Some UV triangles overlap with a positive area.",
+    "why": "Overlaps are fine for mirroring and tiling but unsuitable for unique baking or lightmaps.",
+    "fix": "Inspect the UV Editor. Separate islands only in channels that require unique coverage.",
+    "mechanism": "Triangulates UV faces and tests positive-area intersections, with triangle and pair safety caps.",
+    "exceptions": "Overlap can be intentional (mirrored/stacked UV). Complexity limits yield SKIP, not PASS."
+  }
+}

@@ -1,0 +1,41 @@
+# UE5 Tools Documentation — быстрая публикация
+
+Этот комплект предназначен для публичного репозитория:
+
+- Репозиторий: https://github.com/iteey/blender-Tools-Docs
+- Сайт: https://iteey.github.io/blender-Tools-Docs/
+
+## Как запустить
+
+1. Установи **Git for Windows**: https://git-scm.com/downloads/win (если он уже есть, пропусти).
+2. Распакуй **весь ZIP**, включая скрытую папку `.github`. Можно распаковать прямо в локальную папку клонированного репозитория **или в любую обычную папку**.
+3. Дважды нажми **Publish_Site.bat**.
+4. Если спросит, подтверди `Y`. При необходимости войди в GitHub через Git Credential Manager. Пароль или токен в скрипте не хранятся.
+5. После успешного `git push` откроется GitHub Actions. Проверь, что процесс **Build and publish UE5 Tools docs** стал зелёным.
+6. Открой https://iteey.github.io/blender-Tools-Docs/ и обнови страницу (Ctrl+F5), если видишь старую версию.
+
+### Что делает BAT
+
+- Если скрипт не находится внутри клонированного репозитория, клонирует **именно твой публичный репозиторий** в `_github_repo` рядом с файлами комплекта.
+- Копирует только файлы документации и генератора сайта.
+- Переименовывает конфликтующий workflow `.github/workflows/jekyll-gh-pages.yml` в `jekyll-gh-pages.yml.disabled` (резервная копия сохраняется в репозитории, Jekyll больше не запускается).
+- Коммитит подготовленные файлы и выполняет `git push origin main` **после подтверждения**.
+- Публикацию запускает GitHub Actions автоматически на push. BAT показывает страницу Actions для контроля.
+
+### Чего BAT НЕ делает
+
+- Не использует `git push --force`.
+- Не удаляет материалы проекта или историю коммитов.
+- Не обходит вход в GitHub.
+- Не может сделать сайт доступным немедленно: требуется успешное завершение workflow GitHub Actions.
+- Не меняет Settings → Pages. Там должен быть выбран **Source: GitHub Actions**.
+
+### Если есть ошибка
+
+- `Git was not found` — установи Git for Windows, перезапусти скрипт.
+- `Current branch is not main` — переключи локальный репозиторий на `main`.
+- `Git push failed` — проверь вход в GitHub, доступ к репозиторию и состояние удалённой ветки.
+- `Already staged changes` — сначала разберись с ранее подготовленными изменениями.
+- `workflow failed` — открой GitHub → Actions → Build and publish UE5 Tools docs → ошибочный запуск → логи.
+
+**Важно:** исходные Markdown-файлы сайта находятся в `content/ru/` и `content/en/`. Изменения в них автоматически собираются workflow через `build_site.py` при каждом push в main.
